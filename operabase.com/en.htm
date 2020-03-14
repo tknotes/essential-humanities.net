@@ -1,0 +1,868 @@
+
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"e507aad688",applicationID:"638526"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="https://www.operabase.com/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://www.operabase.com/ressources/pix/icons/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://www.operabase.com/ressources/pix/icons/favicon/favicon-16x16.png">
+	<link rel="manifest" href="https://www.operabase.com/ressources/pix/icons/favicon/site.webmanifest">
+	<link rel="mask-icon" href="https://www.operabase.com/ressources/pix/icons/favicon/safari-pinned-tab.svg" color="#f36d2a">
+	<meta name="msapplication-TileColor" content="#f36d2a">
+	<meta name="msapplication-TileImage" content="/ressources/pix/icons/favicon/mstile-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+    
+		<title>Statistics - Operabase</title>
+		<meta name="description" content="Statistics by work or composer" />
+		<meta name="robots" content="index, follow" />
+		<meta property="og:title" content="Statistics" />
+		<meta property="og:description" content="Statistics by work or composer" />
+		<meta property="og:url" content="https://www.operabase.com/statistics/en" />
+		<meta property="twitter:card" content="summary" />
+		<meta property="twitter:site" content="@BaseOpera" />
+		<meta property="twitter:creator" content="@BaseOpera" />
+		<meta property="twitter:title" content="Statistics" />
+		<meta property="twitter:description" content="Statistics by work or composer" />
+
+		<link rel="canonical" href="en.htm" />
+		<link rel="alternate" href="en.htm" hreflang="x-default" />
+		<link rel="alternate" href="https://www.operabase.com/statistics/bg" hreflang="bg" />
+		<link rel="alternate" href="https://www.operabase.com/statistics/ca" hreflang="ca" />
+		<link rel="alternate" href="https://www.operabase.com/statistics/cs" hreflang="cs" />
+		<link rel="alternate" href="https://www.operabase.com/statistics/da" hreflang="da" />
+		<link rel="alternate" href="https://www.operabase.com/statistics/de" hreflang="de" />
+		<link rel="alternate" href="https://www.operabase.com/statistics/el" hreflang="el" />
+		<link rel="alternate" href="en.htm" hreflang="en" />
+		<link rel="alternate" href="https://www.operabase.com/statistics/es" hreflang="es" />
+		<link rel="alternate" href="https://www.operabase.com/statistics/et" hreflang="et" />
+		<link rel="alternate" href="https://www.operabase.com/statistics/eu" hreflang="eu" />
+		<link rel="alternate" href="https://www.operabase.com/statistics/fi" hreflang="fi" />
+		<link rel="alternate" href="https://www.operabase.com/statistics/fr" hreflang="fr" />
+		<link rel="alternate" href="https://www.operabase.com/statistics/ga" hreflang="ga" />
+		<link rel="alternate" href="https://www.operabase.com/statistics/hu" hreflang="hu" />
+		<link rel="alternate" href="https://www.operabase.com/statistics/is" hreflang="is" />
+		<link rel="alternate" href="https://www.operabase.com/statistics/it" hreflang="it" />
+		<link rel="alternate" href="https://www.operabase.com/statistics/lt" hreflang="lt" />
+		<link rel="alternate" href="https://www.operabase.com/statistics/lv" hreflang="lv" />
+		<link rel="alternate" href="https://www.operabase.com/statistics/mt" hreflang="mt" />
+		<link rel="alternate" href="https://www.operabase.com/statistics/nl" hreflang="nl" />
+		<link rel="alternate" href="https://www.operabase.com/statistics/no" hreflang="no" />
+		<link rel="alternate" href="https://www.operabase.com/statistics/pl" hreflang="pl" />
+		<link rel="alternate" href="https://www.operabase.com/statistics/pt" hreflang="pt" />
+		<link rel="alternate" href="https://www.operabase.com/statistics/ro" hreflang="ro" />
+		<link rel="alternate" href="https://www.operabase.com/statistics/ru" hreflang="ru" />
+		<link rel="alternate" href="https://www.operabase.com/statistics/sk" hreflang="sk" />
+		<link rel="alternate" href="https://www.operabase.com/statistics/sl" hreflang="sl" />
+		<link rel="alternate" href="https://www.operabase.com/statistics/sv" hreflang="sv" />
+    <style type="text/css">
+        :root{--blue:#007bff;--indigo:#6610f2;--purple:#6f42c1;--pink:#e83e8c;--red:#dc3545;--orange:#fd7e14;--yellow:#ffc107;--green:#28a745;--teal:#20c997;--cyan:#17a2b8;--white:#fff;--gray:#6c757d;--gray-dark:#343a40;--primary:#007bff;--secondary:#6c757d;--success:#28a745;--info:#17a2b8;--warning:#ffc107;--danger:#dc3545;--light:#f8f9fa;--dark:#343a40;--breakpoint-xs:0;--breakpoint-sm:576px;--breakpoint-md:768px;--breakpoint-lg:992px;--breakpoint-xl:1200px;--font-family-sans-serif:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";--font-family-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}*,::after,::before{box-sizing:border-box}html{font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-ms-overflow-style:scrollbar;-webkit-tap-highlight-color:transparent}article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}body{margin:0;font-weight:400;line-height:1.35;text-align:left;background-color:#fff font-family: Roboto,Open Sans,sans-serif;color:#282828;font-size:15px;width:100%;margin:0;padding:0;position:relative;font-display:swap}.h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6{line-height:1.3}.h2,h2{font-size:21px}a:link,a:visited{color:#1e92ff;text-decoration:none}.lang-select li a:active,.lang-select li a:hover,.main_menu_left_line a:active,.main_menu_left_line a:hover,.main_menu_left_line.lang_left_area .lang-select a:active,.main_menu_left_line.lang_left_area .lang-select a:hover,.main_menu_left_line.lang_left_area a.lang-selected:active,.main_menu_left_line.lang_left_area a.lang-selected:hover,a.lang-selected:active,a.lang-selected:hover,a:active,a:active .color-pink,a:hover,a:hover .color-pink{color:#d0021b;text-decoration:none;outline:0}input[type=email],input[type=password],input[type=tel],input[type=text]{padding:8px 10px}.inline{visibility:visible;display:inline;font-weight:400;font-style:normal;text-transform:normal}button,input[type=button],input[type=reset],input[type=submit]{padding:7px 10px;border:none;background-color:#d7d7d7;border:none;outline:0}input[type=email],input[type=password],input[type=tel],input[type=text]{font-family:sans-serif;outline:0;background-color:#faf9f9;border:none;border-bottom:1px solid rgba(0,0,0,.42);padding:8px 10px;color:rgba(0,0,0,.87);border-radius:2px 2px 0 0}.row{display:table-row}#footer_warning{font-size:12px;padding:1px 20px;background-color:#333;text-align:justify;color:#fff;position:fixed;bottom:0;width:100%;box-sizing:border-box;z-index:1000}.ico{visibility:visible;display:inline;font-weight:400;width:15px;opacity:.5;MozOpacity:.5;KHTMLOpacity:.5;cursor:auto}.fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}a.footer_link_more{font-weight:700;text-transform:uppercase}.pro-casting{margin-left:-25px;transform:scale(1.2);margin-bottom:50px}.pro-checkbox{font-size:12px;color:rgba(0,0,0,.38);font-weight:400;padding-left:23px}.pro-checkbox input{margin-left:-23px}.pro-content h1,.pro-content h2,.pro-content h3{font-family:PlayfairDisplay;font-weight:400;font-size:35px;color:#2d2d2d}.pro-content li,.pro-content p{font-size:15px;color:#2d2d2d;font-weight:300;line-height:1.93;display:block;clear:both;width:100%}.pro-content ul{list-style:none;padding:0;margin:0}.pro-content li,.pro-dot-1{position:relative}.pro-content li{padding:0 0 0 50px}.pro-content li:before,.pro-dot-1:before{content:'•';position:absolute;top:1px;left:0}.pro-content li:before{left:25px}.pro-input,.pro-select,.ui-autocomplete{font-size:16px;font-weight:300;color:rgba(0,0,0,.38);border-bottom:solid 1px rgba(0,0,0,.12);position:relative}.pro-input i,.pro-select i{font-style:normal;color:#d0021b}.pro-input input,.pro-input input:hover,.pro-select select{border:none;background:0 0}.pro-input label,.pro-select label{left:0;top:8px;pointer-events:none;position:absolute;transition:.2s ease all;-moz-transition:.2s ease all;-webkit-transition:.2s ease all;font-size:16px;color:rgba(0,0,0,.38)}.pro-input input.filled~label,.pro-input input:focus~label,.pro-select select.filled~label,.pro-select select:focus~label{top:-18px;font-size:13px;color:#2d2d2d}.pro-select select{position:relative;font-family:inherit;background-color:transparent;border-radius:0;border:none;appearance:none;-webkit-appearance:none;-moz-appearance:none;padding:8px 10px}.pro-select:after{position:absolute;top:16px;right:10px;width:0;height:0;padding:0;content:'';border-left:5px solid transparent;border-right:5px solid transparent;border-top:5px solid #f36d2a;pointer-events:none}.pro-select option{padding:6px 16px;color:#2d2d2d;background:#fff}.pro-header-overflow{margin-top:15px}.pro-overflow{border-radius:5px;box-shadow:0 24px 38px 3px rgba(0,0,0,.14);background-color:#fafafa;padding:20px 15px}.pro-overflow-footer{font-size:12px;color:rgba(0,0,0,.52);padding:12px 15px 9px;background-color:#f0f0f0;margin:10px -15px -20px;border-radius:0 0 5px 5px}.pro-section{color:#3a3a3a}.pro-section a{color:#1e92ff}.pro-section b{font-weight:500}.pro-section p{font-size:15px;color:#2d2d2d}.pro-text{font-weight:300;font-size:15px;color:#2d2d2d}.pro-text-red{color:#d0021b}.pro-title-1-container{position:absolute;left:0;top:3px;width:100%;text-align:center}.pro-title-1{font-family:PlayfairDisplay;color:#f8f8f8;font-weight:400;margin-top:0;padding:0 35px;width:100%;font-size:25px}#right_side .pro-title-2,.pro-title-2{font-family:PlayfairDisplay;font-weight:400;font-size:35px;color:#2d2d2d}.pro-title-4{font-size:25px;font-weight:300;color:#f36d2a}.pro-title-5{font-size:15px;font-weight:300;color:#3a3a3a}#view{margin:0;padding:0!important}#view *{box-sizing:border-box}.pro-casting{margin-left:-60px;transform:scale(1);margin-bottom:0}.pro-header-overflow{position:relative}.pro-register .pro-header-overflow{margin:10px 20px 30px}@media(min-width:768px){.hint-container{margin-top:25px;max-width:555px}.pro-header-overflow{max-width:500px;margin-right:auto;margin-left:auto}.pro-overflow-step{position:relative;margin-top:-210px}.pro-register .pro-header-overflow{max-width:500px;margin:-30px auto 30px}.pro-title-1{font-size:40px}#right_side .pro-title-2,.pro-content h1,.pro-content h2,.pro-content h3,.pro-title-2{font-size:30px}}@media(min-width:992px){.dialog-lg-wider{width:30rem}.pro-casting{margin-left:-90px}.pro-header-overflow{position:absolute;z-index:2;right:30px;width:33%;max-width:100%}.pro-overflow-aos{top:50%;margin-top:-160px}.pro-overflow-artist{top:50%;margin-top:-110px}.pro-radio{padding-left:0}.pro-radio input[type=radio]{margin-left:-40px}.pro-register .pro-header-overflow{top:-50px;max-width:100%}.pro-register .pro-overflow-register{top:50px}.pro-title-1{font-size:55px;margin-top:0}#right_side .pro-title-2,.pro-content h1,.pro-content h2,.pro-content h3,.pro-title-2{font-size:55px}.pro-title-1-container{width:62%;text-align:left;height:100%}}.col,.col-lg,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-md,.col-md-10,.col-md-2,.col-md-3,.col-md-4,.col-md-6,.col-md-8,.col-md-9,.col-sm,.col-sm-10,.col-sm-3,.col-sm-4,.col-sm-6,.col-sm-8,.col-sm-9{position:relative;width:100%;min-height:1px;padding-right:15px;padding-left:15px;box-sizing:border-box;float:left}.col{flex-basis:0;flex-grow:1;max-width:100%}.container-fluid{clear:both;width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto;box-sizing:border-box}.row-bst{display:flex;flex-wrap:wrap;margin-right:-15px;margin-left:-15px}.row-bst:after{content:"";display:table;clear:both;height:1px}.align-items-center{-webkit-box-align:center;-ms-flex-align:center;align-items:center}.text-center{text-align:center}h1{font-size:32px;font-weight:500}p{min-height:10px}.font-size-12{font-size:12px}.font-size-14,.pro-btn.font-size-14,.pro-section p.font-size-14{font-size:14px}.font-size-15{font-size:15px}.font-size-19{font-size:19px}.fa.font-size-20,.font-size-20{font-size:20px}.fa.font-size-22,.font-size-22{font-size:22px}.font-size-25{font-size:25px}.font-size-30{font-size:30px}.font-weight-300{font-weight:300}.font-weight-400{font-weight:400}.font-weight-500{font-weight:500}.lh-1-6{line-height:1.6}.text-color-pro-grey{color:#787878}.text-light-grey{color:#d9d9d9}.pro-section a.text-orange,.text-orange,a.text-orange{color:#f36d2a}.m-x--15{margin-left:-15px;margin-right:-15px}.m-t--20{margin-top:-20px}.m-t-0{margin-top:0}.m-t-5{margin-top:5px}.m-t-13{margin-top:13px}.m-r-10{margin-right:10px}.m-r-15{margin-right:15px}.m-b--3{margin-bottom:-3px}.m-b-5{margin-bottom:5px}.m-b-10{margin-bottom:10px}.m-b-15{margin-bottom:15px}.m-b-20{margin-bottom:20px}.m-b-30{margin-bottom:30px}.m-b-50{margin-bottom:50px}.p-0{padding:0}.p-10-15{padding:10px 15px}.p-x-15{padding-left:15px;padding-right:15px}.p-r-30{padding-right:30px}.header-right{float:right;display:flex;align-items:center;padding:30px 0 22px 10px}.header-breadcrumb{display:none;font-size:12px;font-weight:300;color:rgba(0,0,0,.53);margin:0 0 0 30px}.header-breadcrumb a,.header-breadcrumb i{margin-right:15px}.header-breadcrumb a{font-weight:700;color:#f36d2a}.header-top{padding:5px 15px 0}.logo-box{display:inline-block;padding:34px 30px 34px 0}.logo-box img{width:100%;max-width:180px}.main-header{box-shadow:0 2px 11px 0 rgba(0,0,0,.15);z-index:3;position:relative;background:#fff}.main-content.container-fluid,.main-header .container-fluid{max-width:1440px;margin:0 auto}#menu_responsive{display:inline-block;cursor:pointer;padding:7px 0}#right_side{padding-bottom:20px;padding-top:20px}#right_side h1,.title-h1-content{font-family:'Playfair Display',serif;font-size:32px;font-weight:400;color:#282828;margin-bottom:10px;margin-top:0}#view{margin-top:20px}.footer-container{max-width:1440px}.footer-icon{width:32px;height:32px;margin-right:4px;display:inline-block;background-size:80px auto;background-image:url(../pix/pro/icons/icon_sprite.png)}.footer-main{background:#f6f6f6}.footer-main h5{font-weight:400;font-family:'Playfair Display',serif}.footer-main a{color:#f36d2a}.footer-menu li{width:49%;display:inline-block;margin-bottom:8px;vertical-align:top}.footer-top{padding:35px 0 30px;color:#3a3a3a;font-size:15px;line-height:1.53;margin:0 auto}.main_menu_left_title{font-size:12px;font-weight:700;letter-spacing:3.5px;color:#2d2d2d;margin:0;padding:0;margin-bottom:12px;margin-top:30px;display:block;text-transform:uppercase}.main_menu_left_title:first-child{margin-top:0}.main_menu_left_line{padding-top:4px;padding-bottom:4px;margin-bottom:4px;position:relative}.main_menu_left_line .lbl{background-color:#f36d2a;font-size:10px;font-weight:700;color:#fff;padding:2px;line-height:11px;text-transform:uppercase;margin:1px 0 0 4px;position:absolute}.main_menu_left_line a{display:block;margin-left:10px;font-weight:300;color:#2d2d2d}.main_menu_left_line.active-item{background:rgba(243,109,42,.15);width:250px;margin-left:-20px;padding-left:20px}.main_menu_left_line.active-item a{color:#f36d2a;font-weight:500}
+    </style>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script defer type="text/javascript" src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <link href="https://www.operabase.com/ressources/css/minified1583755254.min.css" rel="stylesheet" type="text/css" />
+<script defer type="text/javascript" src="https://www.operabase.com/ressources/js/minified1583755254.min.js"></script>
+    <script defer src="https://js.stripe.com/v3/"></script>
+    <script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.9.1/jquery.tablesorter.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.4/css/intlTelInput.css" />
+    <script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.4/js/intlTelInput.min.js"></script>
+    <script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.4/js/utils.js"></script>
+
+    <script>
+        window.__operabase =  window.__operabase || {};
+        window.__operabase.idart = '';
+        window.__operabase.url = 'https://www.operabase.com/statistics/en';
+        window.__operabase.host = 'www.operabase.com';
+        window.__operabase.afterview = '';
+        window.__operabase.lang = 'en';
+        var idart = window.__operabase.idart;
+        var url = window.__operabase.url;
+        var host = window.__operabase.host;
+        var afterview = window.__operabase.afterview ;
+        var lang = window.__operabase.lang;
+    </script>
+    
+                <script src="https://www.operabase.com/ressources/js/statistics.js?1584072186"></script>
+        <link rel="stylesheet" type="text/css" href="https://www.operabase.com/ressources/css/statistics.css?1584072186">
+    
+    <link rel="stylesheet" type="text/css" href="https://www.operabase.com/ressources/css/main_responsive.css?1584072186">
+        
+    <script>
+!function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+analytics.load("xzBvoxFjq6vJ1GS89fQOlBfP6W95HTWD");
+}}();
+analytics.page();
+$.ajaxSetup({
+        beforeSend: function(jqXHR, xhr){
+          var url = xhr.url.split("?")[0];
+    
+          url = url.replace("/ressources/views/", "");
+          url = url.split("/");
+          var eventDomain = url.shift(1);
+          var eventName = url.join(".").replace(".php", "");
+          var data = xhr.type === "POST" ? xhr.data : (xhr.url.indexOf("?")>=0 ? xhr.url.split("?")[1] : "");
+    
+          var result = {};
+          data.split("&").forEach(function(pair) {
+            pair = pair.split("=");
+            result[pair[0]] = decodeURIComponent(pair[1] || "");
+          });
+          data = JSON.parse(JSON.stringify(result));
+    
+          analytics.track(eventName, {
+            action: eventName,
+            data: data
+          });
+        }
+      })</script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45277592-3"></script>
+            <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag("js", new Date());
+            
+            gtag("config", "UA-45277592-3", { "optimize_id": "GTM-5MWHZFC"});
+            </script>
+    <!--link  rel="stylesheet" href="/css/responsive_artist.css" /-->
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <script>
+        /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+        /* This file is meant as a standalone workflow for
+        - testing support for link[rel=preload]
+        - enabling async CSS loading in browsers that do not support rel=preload
+        - applying rel preload css once loaded, whether supported or not.
+        */
+        (function( w ){
+            "use strict";
+            // rel=preload support test
+            if( !w.loadCSS ){
+                w.loadCSS = function(){};
+            }
+            // define on the loadCSS obj
+            var rp = loadCSS.relpreload = {};
+            // rel=preload feature support test
+            // runs once and returns a function for compat purposes
+            rp.support = (function(){
+                var ret;
+                try {
+                    ret = w.document.createElement( "link" ).relList.supports( "preload" );
+                } catch (e) {
+                    ret = false;
+                }
+                return function(){
+                    return ret;
+                };
+            })();
+
+            // if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+            // then change that media back to its intended value on load
+            rp.bindMediaToggle = function( link ){
+                // remember existing media attr for ultimate state, or default to 'all'
+                var finalMedia = link.media || "all";
+
+                function enableStylesheet(){
+                    // unbind listeners
+                    if( link.addEventListener ){
+                        link.removeEventListener( "load", enableStylesheet );
+                    } else if( link.attachEvent ){
+                        link.detachEvent( "onload", enableStylesheet );
+                    }
+                    link.setAttribute( "onload", null );
+                    link.media = finalMedia;
+                }
+
+                // bind load handlers to enable media
+                if( link.addEventListener ){
+                    link.addEventListener( "load", enableStylesheet );
+                } else if( link.attachEvent ){
+                    link.attachEvent( "onload", enableStylesheet );
+                }
+
+                // Set rel and non-applicable media type to start an async request
+                // note: timeout allows this to happen async to let rendering continue in IE
+                setTimeout(function(){
+                    link.rel = "stylesheet";
+                    link.media = "only x";
+                });
+                // also enable media after 3 seconds,
+                // which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+                setTimeout( enableStylesheet, 3000 );
+            };
+
+            // loop through link elements in DOM
+            rp.poly = function(){
+                // double check this to prevent external calls from running
+                if( rp.support() ){
+                    return;
+                }
+                var links = w.document.getElementsByTagName( "link" );
+                for( var i = 0; i < links.length; i++ ){
+                    var link = links[ i ];
+                    // qualify links to those with rel=preload and as=style attrs
+                    if( link.rel === "preload" && link.getAttribute( "as" ) === "style" && !link.getAttribute( "data-loadcss" ) ){
+                        // prevent rerunning on link
+                        link.setAttribute( "data-loadcss", true );
+                        // bind listeners to toggle media back
+                        rp.bindMediaToggle( link );
+                    }
+                }
+            };
+
+            // if unsupported, run the polyfill
+            if( !rp.support() ){
+                // run once at least
+                rp.poly();
+
+                // rerun poly on an interval until onload
+                var run = w.setInterval( rp.poly, 500 );
+                if( w.addEventListener ){
+                    w.addEventListener( "load", function(){
+                        rp.poly();
+                        w.clearInterval( run );
+                    } );
+                } else if( w.attachEvent ){
+                    w.attachEvent( "onload", function(){
+                        rp.poly();
+                        w.clearInterval( run );
+                    } );
+                }
+            }
+
+
+            // commonjs
+            if( typeof exports !== "undefined" ){
+                exports.loadCSS = loadCSS;
+            }
+            else {
+                w.loadCSS = loadCSS;
+            }
+        }( typeof global !== "undefined" ? global : this ) );
+    </script>
+
+            <script>
+            $(document).ready(function(){
+                document.oncontextmenu = mischandler;
+                document.onmousedown = mousehandler;
+                document.onmouseup = mousehandler;
+                var isCtrl = false;
+                document.onkeyup=function(e)
+                {
+                    if(e.which == 17)
+                        isCtrl=false;
+                }
+
+                document.onkeydown=function(e)
+                {
+                    if(e.which == 17)
+                        isCtrl=true;
+                    if(((e.which == 85) || (e.which == 117) || (e.which == 65) || (e.which == 97) || (e.which == 67) || (e.which == 99)) && isCtrl == true)
+                    {
+                        //alert('For security reasons, copy has been disabled');
+                        return false;
+                    }
+                }
+            });
+            var isNS = (navigator.appName == "Netscape") ? 1 : 0;
+            if(navigator.appName == "Netscape")
+                document.captureEvents(Event.MOUSEDOWN||Event.MOUSEUP);
+            function mischandler(){
+                return false;
+            }
+
+            function mousehandler(e){
+                var myevent = (isNS) ? e : event;
+                var eventbutton = (isNS) ? myevent.which : myevent.button;
+                if((eventbutton==2)||(eventbutton==3))
+                    return false;
+            }
+        </script>
+        <!--main js-->
+    <script>
+        $(document).ready(function(){
+            var w = $('#left_side').width();
+            //$('#right_side').css('margin-left',w-8)
+            $('#exit_bt').hover(
+                function(){
+                    $(this).attr('src','/ressources/pix/icons/logout_rouge.png')
+                },
+                function(){
+                    $(this).attr('src','/ressources/pix/icons/logout.png')
+                });
+            $('#login_button').hover(
+                function(){
+                    $(this).attr('src','/ressources/pix/icons/login_rouge.png')
+                },
+                function(){
+                    $(this).attr('src','/ressources/pix/icons/login.png')
+                });
+            $('.mailto').each(function(){
+                var text = '';
+                var content = '';
+                var addr= '';
+                text = $(this).html();
+                addr = $(this).data('id')+'@'+$(this).data('host');
+                content = $(this).data('id')+'@'+$(this).data('host');
+                if(text!='') content = text;
+                $(this).html('<a href="mailto:'+addr+'" style="color: blue">'+content+'</a>')
+                $(this).removeAttr('data-id');$(this).removeAttr('data-host');
+            })
+
+            fancybox_iframe('iframe')
+            fancybox_iframe('fancybox')
+            fancybox_iframe_big('fancybox_big')
+            // fancybox_iframe_high('artist_ifr')
+
+            $('.fancybox-thumbs').fancybox({
+                prevEffect : 'false',
+                nextEffect : 'false',
+                closeBtn  : false,
+                arrows    : false,
+                nextClick : true,
+                helpers : {
+                    thumbs : {
+                        width  : 50,
+                        height : 50
+                    },
+                    title : {
+                        type : 'inside'
+                    },
+                    overlay : {
+                        css:{
+                            'background' : 'rgba(0,0,0,0.85)'
+                        }
+                    }
+                }
+            });
+
+
+        });
+        function pg_dimension4box(){
+            //Récupération des dimensions de la page
+            var xHeight = $(document).height();
+            var xWidth = $(window).width();
+            var url = window.location;$
+            $('#form_login').show();
+            $('#form_forgot').hide();
+
+        }
+        function showpassworw(input) {
+            var x = document.getElementById(input);
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+        function fancybox_iframe(e){
+            $("."+e).fancybox({
+                type: "iframe",
+                autoCenter: true,
+                fitToView	: true,
+                autoSize	: true,
+                closeClick	: false,
+                openEffect	: 'none',
+                closeEffect	: 'none'
+            });
+        }
+        function fancybox_iframe_high(e){
+            $("."+e).fancybox({
+                type: "iframe",
+                autoCenter: true,
+                fitToView	: true,
+                width       :'60%',
+                height       :'90%',
+                autoSize	: false,
+                closeClick	: false,
+                openEffect	: 'none',
+                closeEffect	: 'none'
+            });
+        }
+        function fancybox_iframe_big(e){
+            $("."+e).fancybox({
+                type: "iframe",
+                autoCenter: true,
+                fitToView	: true,
+                width       :'80%',
+                autoSize	: false,
+                closeClick	: false,
+                openEffect	: 'none',
+                closeEffect	: 'none'
+            });
+        }
+        function fancybox_iframe_small(e){
+            $("."+e).fancybox({
+                type: "iframe",
+                autoCenter: true,
+                fitToView	: true,
+                width       :'600',
+                autoSize	: false,
+                closeClick	: false,
+                openEffect	: 'none',
+                closeEffect	: 'none'
+            });
+        }
+    </script>
+
+    <style>
+        .has-footer-warning div#hubspot-messages-iframe-container {
+            bottom: 190px !important;
+        }
+
+        @media(min-width: 480px){
+            .has-footer-warning div#hubspot-messages-iframe-container {
+                bottom: 150px !important;
+            }
+        }
+
+        @media(min-width: 768px){
+            .has-footer-warning div#hubspot-messages-iframe-container {
+                bottom: 72px !important;
+            }
+        }
+
+        @media(min-width: 1200px){
+            .has-footer-warning  div#hubspot-messages-iframe-container {
+                bottom: 52px !important;
+            }
+        }
+    </style>
+
+</head>
+<body>
+<header class="main-header clear">
+    
+    <div class="header-top d-md-none">
+        <a href="https://www.facebook.com/operabase/" target="_blank" class="top-icon icon-facebook-top"> </a>
+        <a href="https://twitter.com/BaseOpera" target="_blank" class="top-icon icon-twitter-top"> </a>
+        <a href="https://www.instagram.com/operabaseglobal/" target="_blank" class="top-icon icon-instagram-top"> </a>
+        <a href="https://www.linkedin.com/company/operabase-global/about/" target="_blank" class="top-icon icon-linkedin-top"> </a>
+        <a href="https://www.operabase.com/cdn-cgi/l/email-protection#422d32273023202331276c212d2c3623213602252f232b2e6c212d2f" class=""> </a>
+        <div class="header-accounts float-right m-l-15">
+            <i class="fa fa-key"></i>
+							<a href="https://www.operabase.com/login/en">Login</a> /
+							<a href="https://www.operabase.com/register/en#pro-register">Register</a>        </div>
+    </div>
+    <div class="container-fluid header-bottom">
+        <a href="https://www.operabase.com/en" class="logo-box">
+            <img src="https://www.operabase.com/ressources/pix/logos/top_full.png" alt="Operabase - theatres, artists, festivals list" title="Operabase - theatres, artists, festivals list" />
+        </a>
+        <div class="header-breadcrumb">
+            <a href="https://www.operabase.com/en">Home</a> <i class="fa fa-angle-right" aria-hidden="true"></i> <span>Statistics</span>        </div>
+        <div class="header-right">
+            <div class="position-relative float-left"><a id="lang-selector" class="position-relative d_inline-block m-r-15 font-size-12 lang-selected triangle-1" href="en.htm"><i class="flag-icon bg-en"></i>En</a><ul id="lang-select" class="no-bullets d_none lang-select shadow-1 triangle-2"><li class="lang-select-header">Select language</li><li><a lang="bg" class="d-block" href="https://www.operabase.com/statistics/bg"><i class="flag-icon bg-bg"></i>Bg</a></li><li><a lang="ca" class="d-block" href="https://www.operabase.com/statistics/ca"><i class="flag-icon bg-ca"></i>Ca</a></li><li><a lang="cs" class="d-block" href="https://www.operabase.com/statistics/cs"><i class="flag-icon bg-cs"></i>Cs</a></li><li><a lang="da" class="d-block" href="https://www.operabase.com/statistics/da"><i class="flag-icon bg-da"></i>Da</a></li><li><a lang="de" class="d-block" href="https://www.operabase.com/statistics/de"><i class="flag-icon bg-de"></i>De</a></li><li><a lang="el" class="d-block" href="https://www.operabase.com/statistics/el"><i class="flag-icon bg-el"></i>Εl</a></li><li><a lang="es" class="d-block" href="https://www.operabase.com/statistics/es"><i class="flag-icon bg-es"></i>Es</a></li><li><a lang="et" class="d-block" href="https://www.operabase.com/statistics/et"><i class="flag-icon bg-et"></i>Et</a></li><li><a lang="eu" class="d-block" href="https://www.operabase.com/statistics/eu"><i class="flag-icon bg-eu"></i>Eu</a></li><li><a lang="fi" class="d-block" href="https://www.operabase.com/statistics/fi"><i class="flag-icon bg-fi"></i>Fi</a></li><li><a lang="fr" class="d-block" href="https://www.operabase.com/statistics/fr"><i class="flag-icon bg-fr"></i>Fr</a></li><li><a lang="ga" class="d-block" href="https://www.operabase.com/statistics/ga"><i class="flag-icon bg-ga"></i>Ga</a></li><li><a lang="hu" class="d-block" href="https://www.operabase.com/statistics/hu"><i class="flag-icon bg-hu"></i>Hu</a></li><li><a lang="is" class="d-block" href="https://www.operabase.com/statistics/is"><i class="flag-icon bg-is"></i>Is</a></li><li><a lang="it" class="d-block" href="https://www.operabase.com/statistics/it"><i class="flag-icon bg-it"></i>It</a></li><li><a lang="lt" class="d-block" href="https://www.operabase.com/statistics/lt"><i class="flag-icon bg-lt"></i>Lt</a></li><li><a lang="lv" class="d-block" href="https://www.operabase.com/statistics/lv"><i class="flag-icon bg-lv"></i>Lv</a></li><li><a lang="mt" class="d-block" href="https://www.operabase.com/statistics/mt"><i class="flag-icon bg-mt"></i>Mt</a></li><li><a lang="nl" class="d-block" href="https://www.operabase.com/statistics/nl"><i class="flag-icon bg-nl"></i>Nl</a></li><li><a lang="no" class="d-block" href="https://www.operabase.com/statistics/no"><i class="flag-icon bg-no"></i>No</a></li><li><a lang="pl" class="d-block" href="https://www.operabase.com/statistics/pl"><i class="flag-icon bg-pl"></i>Pl</a></li><li><a lang="pt" class="d-block" href="https://www.operabase.com/statistics/pt"><i class="flag-icon bg-pt"></i>Pt</a></li><li><a lang="ro" class="d-block" href="https://www.operabase.com/statistics/ro"><i class="flag-icon bg-ro"></i>Ro</a></li><li><a lang="ru" class="d-block" href="https://www.operabase.com/statistics/ru"><i class="flag-icon bg-ru"></i>Ru</a></li><li><a lang="sk" class="d-block" href="https://www.operabase.com/statistics/sk"><i class="flag-icon bg-sk"></i>Sk</a></li><li><a lang="sl" class="d-block" href="https://www.operabase.com/statistics/sl"><i class="flag-icon bg-sl"></i>Sl</a></li><li><a lang="sv" class="d-block" href="https://www.operabase.com/statistics/sv"><i class="flag-icon bg-sv"></i>Sv</a></li></ul></div>            <form id="logout_form" method="post" action="en.htm" class="inline">
+                <input type="hidden" name="logout"/>
+            </form>
+            <div class="position-relative float-left d-none d-md-block header-accounts" id="header-accounts">
+                <form method="post" action="https://www.operabase.com/login/en" id="form_top">
+											<input type="hidden" name="page" value="/statistics/en"/>
+											<input class="pro-btn pro-btn-primary" type="submit" value="Login" />
+											</form>            </div>
+
+            <div id="menu_responsive">&#9776; MENU</div>
+
+        </div>
+    </div>
+</header>
+<div class="main-content container-fluid">
+    <div class="row-bst">
+        <aside id="left_side" class="col">
+            <i id="close-left" class="d-xl-none fa fa-times-circle btn-close font-size-22"></i>
+            <ul class="no-bullets">
+							<li class="main_menu_left_title">Introduction</li>
+
+<li class="main_menu_left_line">
+<a href="https://www.operabase.com/intro/en" target="_top" title="Introduction">Introduction</a>
+							</li>
+
+<li class="main_menu_left_line">
+<a href="https://www.operabase.com/pro/en" target="_top" title="For Arts Organisations">For Arts Organisations</a>
+							</li>
+
+<li class="main_menu_left_line">
+<a href="https://www.operabase.com/proartist/en" target="_top" title="For Artists">For Artists</a>
+							</li>
+
+<li class="main_menu_left_line">
+<a href="https://www.operabase.com/proagent/en" target="_top" title="For Agents">For Agents</a>
+							</li>
+
+<li class="main_menu_left_line">
+<a href="https://www.operabase.com/contact/en" target="_top" title="Contact us">Contact us</a>
+							</li>
+
+							<li class="main_menu_left_title">Performances</li>
+
+<li class="main_menu_left_line">
+<a href="https://www.operabase.com/performances/en" target="_top" title="Performances">Performances</a>
+							</li>
+
+<li class="main_menu_left_line">
+<a href="https://www.operabase.com/seasons/en" target="_top" title="Seasons">Seasons</a>
+							</li>
+
+<li class="main_menu_left_line">
+<a href="https://www.operabase.com/festivals/en" target="_top" title="Festivals">Festivals</a>
+							</li>
+
+<li class="main_menu_left_line">
+<a href="https://www.operabase.com/articles/en" target="_top" title="Articles">Articles</a>
+							</li>
+
+<li class="main_menu_left_line">
+<a href="https://www.operabase.com/highlights/en" target="_top" title="Highlights">Highlights</a>
+							</li>
+
+							<li class="main_menu_left_title">Artists</li>
+
+<li class="main_menu_left_line">
+<a href="https://www.operabase.com/artists/en" target="_top" title="Artists">Artists</a>
+							</li>
+
+<li class="main_menu_left_line">
+<a href="https://www.operabase.com/managers/en" target="_top" title="Managers">Managers</a>
+							</li>
+
+<li class="main_menu_left_line">
+<a href="https://www.operabase.com/competitions/en" target="_top" title="Competitions">Competitions</a>
+							</li>
+
+							<li class="main_menu_left_title">Companies</li>
+
+<li class="main_menu_left_line">
+<a href="https://www.operabase.com/companies/en" target="_top" title="Companies">Companies</a>
+							</li>
+
+<li class="main_menu_left_line">
+<a href="https://www.operabase.com/maps/en" target="_top" title="Maps">Maps</a>
+							</li>
+
+							<li class="main_menu_left_title">Productions</li>
+
+<li class="main_menu_left_line">
+<a href="https://www.operabase.com/rentals/en" target="_top" title="Rentals">Rentals</a>
+							</li>
+
+							<li class="main_menu_left_title">Reference</li>
+
+<li class="main_menu_left_line active-item">
+<a href="en.htm" target="_top" title="Statistics">Statistics</a>
+							</li>
+
+<li class="main_menu_left_line">
+<a href="https://www.operabase.com/onthisday/en" target="_top" title="On these days">On these days</a>
+							</li>
+
+							<li class="main_menu_left_title">Language</li>
+
+						<li class="main_menu_left_line">
+							<div class="position-relative"><a href="en.htm#" class="position-relative d-inline-block lang-selected lang-selected-sidebar triangle-1"><i class="flag-icon bg-en"></i>En</a>
+							<ul class="no-bullets d_none lang-select lang-select-sidebar shadow-1 triangle-2"><li class="lang-select-header">Select language</li>
+<li><a lang="bg" class="d-block" href="https://www.operabase.com/statistics/bg"><i class="flag-icon bg-bg"></i>Bg</a></li><li><a lang="ca" class="d-block" href="https://www.operabase.com/statistics/ca"><i class="flag-icon bg-ca"></i>Ca</a></li><li><a lang="cs" class="d-block" href="https://www.operabase.com/statistics/cs"><i class="flag-icon bg-cs"></i>Cs</a></li><li><a lang="da" class="d-block" href="https://www.operabase.com/statistics/da"><i class="flag-icon bg-da"></i>Da</a></li><li><a lang="de" class="d-block" href="https://www.operabase.com/statistics/de"><i class="flag-icon bg-de"></i>De</a></li><li><a lang="el" class="d-block" href="https://www.operabase.com/statistics/el"><i class="flag-icon bg-el"></i>Εl</a></li><li><a lang="es" class="d-block" href="https://www.operabase.com/statistics/es"><i class="flag-icon bg-es"></i>Es</a></li><li><a lang="et" class="d-block" href="https://www.operabase.com/statistics/et"><i class="flag-icon bg-et"></i>Et</a></li><li><a lang="eu" class="d-block" href="https://www.operabase.com/statistics/eu"><i class="flag-icon bg-eu"></i>Eu</a></li><li><a lang="fi" class="d-block" href="https://www.operabase.com/statistics/fi"><i class="flag-icon bg-fi"></i>Fi</a></li><li><a lang="fr" class="d-block" href="https://www.operabase.com/statistics/fr"><i class="flag-icon bg-fr"></i>Fr</a></li><li><a lang="ga" class="d-block" href="https://www.operabase.com/statistics/ga"><i class="flag-icon bg-ga"></i>Ga</a></li><li><a lang="hu" class="d-block" href="https://www.operabase.com/statistics/hu"><i class="flag-icon bg-hu"></i>Hu</a></li><li><a lang="is" class="d-block" href="https://www.operabase.com/statistics/is"><i class="flag-icon bg-is"></i>Is</a></li><li><a lang="it" class="d-block" href="https://www.operabase.com/statistics/it"><i class="flag-icon bg-it"></i>It</a></li><li><a lang="lt" class="d-block" href="https://www.operabase.com/statistics/lt"><i class="flag-icon bg-lt"></i>Lt</a></li><li><a lang="lv" class="d-block" href="https://www.operabase.com/statistics/lv"><i class="flag-icon bg-lv"></i>Lv</a></li><li><a lang="mt" class="d-block" href="https://www.operabase.com/statistics/mt"><i class="flag-icon bg-mt"></i>Mt</a></li><li><a lang="nl" class="d-block" href="https://www.operabase.com/statistics/nl"><i class="flag-icon bg-nl"></i>Nl</a></li><li><a lang="no" class="d-block" href="https://www.operabase.com/statistics/no"><i class="flag-icon bg-no"></i>No</a></li><li><a lang="pl" class="d-block" href="https://www.operabase.com/statistics/pl"><i class="flag-icon bg-pl"></i>Pl</a></li><li><a lang="pt" class="d-block" href="https://www.operabase.com/statistics/pt"><i class="flag-icon bg-pt"></i>Pt</a></li><li><a lang="ro" class="d-block" href="https://www.operabase.com/statistics/ro"><i class="flag-icon bg-ro"></i>Ro</a></li><li><a lang="ru" class="d-block" href="https://www.operabase.com/statistics/ru"><i class="flag-icon bg-ru"></i>Ru</a></li><li><a lang="sk" class="d-block" href="https://www.operabase.com/statistics/sk"><i class="flag-icon bg-sk"></i>Sk</a></li><li><a lang="sl" class="d-block" href="https://www.operabase.com/statistics/sl"><i class="flag-icon bg-sl"></i>Sl</a></li><li><a lang="sv" class="d-block" href="https://www.operabase.com/statistics/sv"><i class="flag-icon bg-sv"></i>Sv</a></li>
+							</ul></div>
+							</ul>
+        </aside>
+        <main id="right_side" class="col">
+            <article id="view" class="col">
+                
+
+
+<div class="statistics_bloc"> 
+    <div class="statistics_top">
+        <div>Number of performances since 1996 : </div>
+        <div>Number of performances since August 01, 2019 : </div>
+        <div>Number of performances in 2020: </div>
+    </div>
+    <div id="form">
+  
+        <div class="table">
+            <div  class="form_title">Statistics by work and by composer</div>
+            <div class="row">
+                <div class="cell ">Choose the season</div>
+                <div class="cell choice"></div> 
+                <div class="cell choice">Choose a country</div> 
+                <div class="cell choice"></div> 
+            </div>
+            
+            <div class="row">  
+                <div class="cell">     
+                    <select name="season" id="season">
+                        <option value="2004">2004/2005</option><option value="2005">2005/2006</option><option value="2006">2006/2007</option><option value="2007">2007/2008</option><option value="2008">2008/2009</option><option value="2009">2009/2010</option><option value="2010">2010/2011</option><option value="2011">2011/2012</option><option value="2012">2012/2013</option><option value="2013">2013/2014</option><option value="2014">2014/2015</option><option value="2015">2015/2016</option><option value="2016">2016/2017</option><option value="2017">2017/2018</option><option value="2018">2018/2019</option><option value="2019" selected="selected">2019/2020</option>                    </select>
+                    <div>or from</div>
+                    <select name="season_begin" id="season_begin">
+                        <option value="" selected></option>
+                        <option value="2004">2004</option><option value="2005">2005</option><option value="2006">2006</option><option value="2007">2007</option><option value="2008">2008</option><option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option>                    </select>
+                    <div id="season_end">
+                        <div>To</div> 
+                        <select name="season_end" id="end"></select>
+                    </div>                    
+                </div>
+                <div class="cell choice">
+                    <div class="table">                        
+                        <div class="row"> 
+                            <div class="cell choice" style="text-align: right">Opera</div> <div class="cell choice"><input type="checkbox" name="opera" value="Y" class="chkbox"  /></div>   
+                            <div class="cell choice" style="text-align: right">Vocal/ Song cycle</div> <div class="cell choice"><input type="checkbox" name="vs" value="Y" class="chkbox"  /></div>
+                                                                                
+                        </div>                     
+                        <div class="row">                              
+                            <div class="cell choice" style="text-align: right">Operetta</div> <div class="cell choice"><input type="checkbox" name="operetta" value="Y" class="chkbox"  /></div>                              
+                            <div class="cell choice" style="text-align: right">Oratorio</div> <div class="cell choice"><input type="checkbox" name="or" value="Y" class="chkbox"  /></div>        
+                        </div>                    
+                        <div class="row">                             
+                            <div class="cell choice" style="text-align: right">Zarzuela</div> <div class="cell choice"><input type="checkbox" name="zarzuela" value="Y" class="chkbox"  /></div>                            
+                            <div class="cell choice" style="text-align: right">Musicals</div> <div class="cell choice"><input type="checkbox" name="musical" value="Y" class="chkbox"  /></div> 
+                        </div>                  
+                        <div class="row">                             
+                            <div class="cell choice" style="text-align: right">Music-theatre</div> <div class="cell choice"><input type="checkbox" name="mt" value="Y" class="chkbox"  /></div>                              
+                            <div class="cell choice" style="text-align: right">Derived</div> <div class="cell choice"><input type="checkbox" name="derived" value="Y" class="chkbox"  /></div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="cell choice"> 
+                    <select name="splash" id="splash">
+                        <option value="t">World</option>
+                        <option value="al">Albania</option><option value="dz">Algeria</option><option value="ad">Andorra</option><option value="ar">Argentina</option><option value="am">Armenia</option><option value="au">Australia</option><option value="at">Austria</option><option value="az">Azerbaijan</option><option value="by">Belarus</option><option value="be">Belgium</option><option value="ba">Bosnia-Herzegovina</option><option value="br">Brazil</option><option value="bg">Bulgaria</option><option value="ca">Canada</option><option value="cl">Chile</option><option value="cn">China</option><option value="co">Colombia</option><option value="cr">Costa Rica</option><option value="hr">Croatia</option><option value="cu">Cuba</option><option value="cy">Cyprus</option><option value="cz">Czech Republic</option><option value="dk">Denmark</option><option value="do">Dominican Republic</option><option value="ec">Ecuador</option><option value="eg">Egypt</option><option value="sv">El Salvador</option><option value="er">Eritrea</option><option value="ee">Estonia</option><option value="fi">Finland</option><option value="fr">France</option><option value="ge">Georgia</option><option value="de">Germany</option><option value="gr">Greece</option><option value="ht">Haiti</option><option value="hk">Hong Kong</option><option value="hu">Hungary</option><option value="is">Iceland</option><option value="in">India</option><option value="ie">Ireland</option><option value="il">Israel</option><option value="it">Italy</option><option value="jp">Japan</option><option value="kz">Kazakhstan</option><option value="kg">Kirgizstan</option><option value="kp">Korea</option><option value="kw">Kuwait</option><option value="lv">Latvia</option><option value="lb">Lebanon</option><option value="li">Liechtenstein</option><option value="lt">Lithuania</option><option value="lu">Luxembourg</option><option value="mo">Macau</option><option value="mk">Macedonia</option><option value="mt">Malta</option><option value="mx">Mexico</option><option value="md">Moldova</option><option value="mc">Monaco</option><option value="mn">Mongolia</option><option value="me">Montenegro</option><option value="ma">Morocco</option><option value="na">Namibia</option><option value="nl">Netherlands</option><option value="nz">New Zealand</option><option value="ni">Nicaragua</option><option value="no">Norway</option><option value="om">Oman</option><option value="pa">Panama</option><option value="pe">Peru</option><option value="ph">Philippines</option><option value="pl">Poland</option><option value="pt">Portugal</option><option value="pr">Puerto Rico</option><option value="ro">Romania</option><option value="ru">Russia</option><option value="sa">Saudi Arabia</option><option value="rs">Serbia</option><option value="sg">Singapore</option><option value="sk">Slovakia</option><option value="si">Slovenia</option><option value="za">South Africa</option><option value="kr">South Korea</option><option value="es">Spain</option><option value="se">Sweden</option><option value="ch">Switzerland</option><option value="tw">Taiwan</option><option value="th">Thailand</option><option value="tn">Tunisia</option><option value="tr">Turkey</option><option value="ua">Ukraine</option><option value="ae">United Arab Emirates</option><option value="uk">United Kingdom</option><option value="us">United States</option><option value="uy">Uruguay</option><option value="uz">Uzbekistan</option><option value="ve">Venezuela</option><option value="vn">Viet Nam</option> 
+                    </select>
+                </div> 
+                <div class="cell choice">
+                    <select name="nb" id="nb">
+                        <option value="3" >3</option>
+                        <option value="5" >5</option>
+                        <option value="10" >10</option>
+                        <option value="20" selected >20</option>
+                        <option value="30" >30</option>
+                        <option value="50" >50</option>                        
+                        <option value="100" >100</option>                       
+                        <option value="200" >200</option>                        
+                        <option value="300" >300</option>                        
+                        <option value="500" >500</option>                       
+                        <option value="1000" >1000</option>
+                    </select> lines                </div>  
+            </div>
+            <div class="row">  
+                <div class="cell choice">
+                    <input type="submit" name="fetch" id="fetch" value="Fetch"/> 
+                </div>  
+            </div>  
+        </div>  
+    </div> 
+    <div id="result"></div>
+    <div id="form_city">
+        <div class="table">
+            <div class="form_title">Statistics by city</div>
+            <div class="row">
+                <div class="cell ">Choose the season</div>
+                <div class="cell choice"></div> 
+                <div class="cell choice">Choose a country</div> 
+                <div class="cell choice"></div> 
+            </div>
+            
+            <div class="row">  
+                <div class="cell">     
+                    <select name="season_city" id="season_city">
+                        <option value=""></option>
+                        <option value="2004">2004/2005</option><option value="2005">2005/2006</option><option value="2006">2006/2007</option><option value="2007">2007/2008</option><option value="2008">2008/2009</option><option value="2009">2009/2010</option><option value="2010">2010/2011</option><option value="2011">2011/2012</option><option value="2012">2012/2013</option><option value="2013">2013/2014</option><option value="2014">2014/2015</option><option value="2015">2015/2016</option><option value="2016">2016/2017</option><option value="2017">2017/2018</option><option value="2018">2018/2019</option><option value="2019" selected="selected">2019/2020</option>                    </select>
+                    <div>or from</div>
+                    <select name="season_begin_city" id="season_begin_city">
+                        <option value="" selected></option>
+                        <option value="2004">2004</option><option value="2005">2005</option><option value="2006">2006</option><option value="2007">2007</option><option value="2008">2008</option><option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option>                    </select>
+                    <div id="season_end_city">
+                        <div class="text-lowercase">To</div> 
+                        <select name="season_end_city" id="end_city"></select>
+                    </div>
+                    
+                </div>
+                <div class="cell choice">
+                    <div class="table">                        
+                        <div class="row"> 
+                        <div class="cell choice" style="text-align: right">Opera</div> <div class="cell choice"><input type="checkbox" name="opera_city" value="Y" class="chkbox"  /></div>   
+                            <div class="cell choice" style="text-align: right">Vocal/ Song cycle</div> <div class="cell choice"><input type="checkbox" name="vs_city" value="Y" class="chkbox"  /></div>
+                                                                                
+                        </div>                     
+                        <div class="row">                              
+                            <div class="cell choice" style="text-align: right">Operetta</div> <div class="cell choice"><input type="checkbox" name="operetta_city" value="Y" class="chkbox"  /></div>                              
+                            <div class="cell choice" style="text-align: right">Oratorio</div> <div class="cell choice"><input type="checkbox" name="or_city" value="Y" class="chkbox"  /></div>        
+                        </div>                    
+                        <div class="row">                             
+                            <div class="cell choice" style="text-align: right">Zarzuela</div> <div class="cell choice"><input type="checkbox" name="zarzuela_city" value="Y" class="chkbox"  /></div>                            
+                            <div class="cell choice" style="text-align: right">Musicals</div> <div class="cell choice"><input type="checkbox" name="musical_city" value="Y" class="chkbox"  /></div> 
+                        </div>                  
+                        <div class="row">                             
+                            <div class="cell choice" style="text-align: right">Music-theatre</div> <div class="cell choice"><input type="checkbox" name="mt_city" value="Y" class="chkbox"  /></div>                              
+                            <div class="cell choice" style="text-align: right">Derived</div> <div class="cell choice"><input type="checkbox" name="derived_city" value="Y" class="chkbox"  /></div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="cell choice"> 
+                    <select name="splash_city" id="splash_city">
+                        <option value="t">World</option>
+                        <option value="al">Albania</option><option value="dz">Algeria</option><option value="ad">Andorra</option><option value="ar">Argentina</option><option value="am">Armenia</option><option value="au">Australia</option><option value="at">Austria</option><option value="az">Azerbaijan</option><option value="by">Belarus</option><option value="be">Belgium</option><option value="ba">Bosnia-Herzegovina</option><option value="br">Brazil</option><option value="bg">Bulgaria</option><option value="ca">Canada</option><option value="cl">Chile</option><option value="cn">China</option><option value="co">Colombia</option><option value="cr">Costa Rica</option><option value="hr">Croatia</option><option value="cu">Cuba</option><option value="cy">Cyprus</option><option value="cz">Czech Republic</option><option value="dk">Denmark</option><option value="do">Dominican Republic</option><option value="ec">Ecuador</option><option value="eg">Egypt</option><option value="sv">El Salvador</option><option value="er">Eritrea</option><option value="ee">Estonia</option><option value="fi">Finland</option><option value="fr">France</option><option value="ge">Georgia</option><option value="de">Germany</option><option value="gr">Greece</option><option value="ht">Haiti</option><option value="hk">Hong Kong</option><option value="hu">Hungary</option><option value="is">Iceland</option><option value="in">India</option><option value="ie">Ireland</option><option value="il">Israel</option><option value="it">Italy</option><option value="jp">Japan</option><option value="kz">Kazakhstan</option><option value="kg">Kirgizstan</option><option value="kp">Korea</option><option value="kw">Kuwait</option><option value="lv">Latvia</option><option value="lb">Lebanon</option><option value="li">Liechtenstein</option><option value="lt">Lithuania</option><option value="lu">Luxembourg</option><option value="mo">Macau</option><option value="mk">Macedonia</option><option value="mt">Malta</option><option value="mx">Mexico</option><option value="md">Moldova</option><option value="mc">Monaco</option><option value="mn">Mongolia</option><option value="me">Montenegro</option><option value="ma">Morocco</option><option value="na">Namibia</option><option value="nl">Netherlands</option><option value="nz">New Zealand</option><option value="ni">Nicaragua</option><option value="no">Norway</option><option value="om">Oman</option><option value="pa">Panama</option><option value="pe">Peru</option><option value="ph">Philippines</option><option value="pl">Poland</option><option value="pt">Portugal</option><option value="pr">Puerto Rico</option><option value="ro">Romania</option><option value="ru">Russia</option><option value="sa">Saudi Arabia</option><option value="rs">Serbia</option><option value="sg">Singapore</option><option value="sk">Slovakia</option><option value="si">Slovenia</option><option value="za">South Africa</option><option value="kr">South Korea</option><option value="es">Spain</option><option value="se">Sweden</option><option value="ch">Switzerland</option><option value="tw">Taiwan</option><option value="th">Thailand</option><option value="tn">Tunisia</option><option value="tr">Turkey</option><option value="ua">Ukraine</option><option value="ae">United Arab Emirates</option><option value="uk">United Kingdom</option><option value="us">United States</option><option value="uy">Uruguay</option><option value="uz">Uzbekistan</option><option value="ve">Venezuela</option><option value="vn">Viet Nam</option>                        
+                        
+                    </select>
+                </div> 
+                <div class="cell choice">
+                    <select name="nb_city" id="nb_city">
+                        <option value="3" >3</option>
+                        <option value="5" >5</option>
+                        <option value="10" >10</option>
+                        <option value="20" selected >20</option>
+                        <option value="30" >30</option>
+                        <option value="50" >50</option>                        
+                        <option value="100" >100</option>                      
+                        <option value="200" >200</option>                        
+                        <option value="300" >300</option>                        
+                        <option value="500" >500</option>                          
+                        <option value="1000" >1000</option>
+                    </select> lines                </div>  
+            </div>
+            <div class="row">  
+                <div class="cell choice">
+                    <input type="submit" name="fetch_city" id="fetch_city" value="Fetch"/> 
+                </div>  
+            </div>  
+        </div>  
+    </div>
+    <div id="result_city"></div>
+    <div id="form_city">
+        <div class="table">
+            <div class="form_title">Statistics by city</div>
+            <div class="row">
+                <div class="cell ">Choose the season</div>
+                <div class="cell choice">Choose a composer</div> 
+                <div class="cell choice">Choose a country</div> 
+                <div class="cell choice"></div> 
+            </div>
+            <div class="row">  
+                <div class="cell">     
+                    <select name="season_composer" id="season_composer">
+                        <option value="2004" data="2019">2004/2005</option><option value="2005" data="2019">2005/2006</option><option value="2006" data="2019">2006/2007</option><option value="2007" data="2019">2007/2008</option><option value="2008" data="2019">2008/2009</option><option value="2009" data="2019">2009/2010</option><option value="2010" data="2019">2010/2011</option><option value="2011" data="2019">2011/2012</option><option value="2012" data="2019">2012/2013</option><option value="2013" data="2019">2013/2014</option><option value="2014" data="2019">2014/2015</option><option value="2015" data="2019">2015/2016</option><option value="2016" data="2019">2016/2017</option><option value="2017" data="2019">2017/2018</option><option value="2018" data="2019">2018/2019</option><option value="2019" selected="selected">2019/2020</option>                    </select>
+                    <div>or from</div>
+                    <select name="season_begin_composer" id="season_begin_composer">
+                        <option value="" selected></option>
+                        <option value="2004">2004</option><option value="2005">2005</option><option value="2006">2006</option><option value="2007">2007</option><option value="2008">2008</option><option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option>                    </select>
+                    <div id="season_end_composer">
+                        <div class="text-lowercase">To</div> 
+                        <select name="end_composer" id="end_composer"></select>
+                    </div>
+                </div>
+                <div class="cell choice"> 
+                    <input name="choice_composer" id="choice_composer" type="text"/>
+                </div> 
+                <div class="cell choice"> 
+                    <select name="splash_composer" id="splash_composer">
+                        <option value="t">World</option>                        
+                        <option value="al">Albania</option><option value="dz">Algeria</option><option value="ad">Andorra</option><option value="ar">Argentina</option><option value="am">Armenia</option><option value="au">Australia</option><option value="at">Austria</option><option value="az">Azerbaijan</option><option value="by">Belarus</option><option value="be">Belgium</option><option value="ba">Bosnia-Herzegovina</option><option value="br">Brazil</option><option value="bg">Bulgaria</option><option value="ca">Canada</option><option value="cl">Chile</option><option value="cn">China</option><option value="co">Colombia</option><option value="cr">Costa Rica</option><option value="hr">Croatia</option><option value="cu">Cuba</option><option value="cy">Cyprus</option><option value="cz">Czech Republic</option><option value="dk">Denmark</option><option value="do">Dominican Republic</option><option value="ec">Ecuador</option><option value="eg">Egypt</option><option value="sv">El Salvador</option><option value="er">Eritrea</option><option value="ee">Estonia</option><option value="fi">Finland</option><option value="fr">France</option><option value="ge">Georgia</option><option value="de">Germany</option><option value="gr">Greece</option><option value="ht">Haiti</option><option value="hk">Hong Kong</option><option value="hu">Hungary</option><option value="is">Iceland</option><option value="in">India</option><option value="ie">Ireland</option><option value="il">Israel</option><option value="it">Italy</option><option value="jp">Japan</option><option value="kz">Kazakhstan</option><option value="kg">Kirgizstan</option><option value="kp">Korea</option><option value="kw">Kuwait</option><option value="lv">Latvia</option><option value="lb">Lebanon</option><option value="li">Liechtenstein</option><option value="lt">Lithuania</option><option value="lu">Luxembourg</option><option value="mo">Macau</option><option value="mk">Macedonia</option><option value="mt">Malta</option><option value="mx">Mexico</option><option value="md">Moldova</option><option value="mc">Monaco</option><option value="mn">Mongolia</option><option value="me">Montenegro</option><option value="ma">Morocco</option><option value="na">Namibia</option><option value="nl">Netherlands</option><option value="nz">New Zealand</option><option value="ni">Nicaragua</option><option value="no">Norway</option><option value="om">Oman</option><option value="pa">Panama</option><option value="pe">Peru</option><option value="ph">Philippines</option><option value="pl">Poland</option><option value="pt">Portugal</option><option value="pr">Puerto Rico</option><option value="ro">Romania</option><option value="ru">Russia</option><option value="sa">Saudi Arabia</option><option value="rs">Serbia</option><option value="sg">Singapore</option><option value="sk">Slovakia</option><option value="si">Slovenia</option><option value="za">South Africa</option><option value="kr">South Korea</option><option value="es">Spain</option><option value="se">Sweden</option><option value="ch">Switzerland</option><option value="tw">Taiwan</option><option value="th">Thailand</option><option value="tn">Tunisia</option><option value="tr">Turkey</option><option value="ua">Ukraine</option><option value="ae">United Arab Emirates</option><option value="uk">United Kingdom</option><option value="us">United States</option><option value="uy">Uruguay</option><option value="uz">Uzbekistan</option><option value="ve">Venezuela</option><option value="vn">Viet Nam</option> 
+                    </select>
+                </div> 
+                <div class="cell choice">
+                    <!--select name="nb_composer" id="nb_composer">
+                        <option value="3" >3</option>
+                        <option value="5" >5</option>
+                        <option value="10" >10</option>
+                        <option value="20" selected >20</option>
+                        <option value="30" >30</option>
+                        <option value="50" >50</option>                        
+                        <option value="100" >100</option>                     
+                        <option value="200" >200</option>                        
+                        <option value="300" >300</option>                        
+                        <option value="500" >500</option>                     
+                        <option value="1000" >1000</option>
+                    </select> lines-->
+                </div>     
+            </div> 
+            <div class="row">  
+                <div class="cell choice">
+                    <input type="submit" name="fetch_composer" id="fetch_composer" value="Fetch"/> 
+                </div>  
+            </div>        
+        </div> 
+        <input type="hidden" id="compid"/>
+    </div>
+    <div id="result_composer"></div>
+</div>
+
+
+
+            </article>
+        </main>
+    </div>
+</div>
+
+<footer class="container-fluid footer-main">
+            <div class="footer-container footer-top row-bst">
+                        <div class="col-sm-6 col-lg-3 m-b-15">
+                            <a href="https://www.operabase.com/en" class="d-inline-block m-t-5 m-b-20">
+                                <img src="https://www.operabase.com/ressources/pix/logos/top_full.png" alt="Operabase - Make your life sing!" title="Operabase - Make your life sing!" width="180" />
+                            </a>
+                            <p>
+								Operabase has documented operatic activity worldwide since 1996, with over 500,000 performances on file. It records the work of artists in over 900 theatres, and publishes season information to opera-goers in 23 languages. <a href="https://www.operabase.com/intro/en" class="footer_link_more">More</a>
+                            </p>
+                            <p class="footer-social m-t-14">
+                                <a href="https://www.facebook.com/operabase/" target="_blank" class="footer-icon icon-facebook"> </a>
+								<a href="https://twitter.com/BaseOpera" target="_blank" class="footer-icon icon-twitter"> </a>
+								<a href="https://www.instagram.com/operabaseglobal/" target="_blank" class="footer-icon icon-instagram"> </a>
+								<a href="https://www.linkedin.com/company/operabase-global/about/" target="_blank" class="footer-icon icon-linkedin"> </a>
+                                <a href="https://www.operabase.com/cdn-cgi/l/email-protection#e1828e8f95808295a18e9184938083809284cf828e8c" class=""> </a>
+                            </p>
+                        </div>
+                        <div class="col-sm-6 col-lg-3 m-b-15">
+                                <h5 class="font-size-20 m-b-15">
+                                    Main features                                </h5>
+                                <ul class="no-bullets m-t-0 p-0 footer-menu">
+                                    <li><a href="https://www.operabase.com/performances/en">Performances</a></li>
+                                    <li><a href="https://www.operabase.com/competitions/en">Competitions</a></li>
+                                    <li><a href="https://www.operabase.com/seasons/en">Seasons</a></li>
+                                    <li><a href="https://www.operabase.com/companies/en">Companies</a></li>
+                                    <li><a href="https://www.operabase.com/festivals/en">Festivals</a></li>
+                                    <li><a href="https://www.operabase.com/maps/en">Maps</a></li>
+                                    <li><a href="https://www.operabase.com/articles/en">Articles</a></li>
+                                    <li><a href="https://www.operabase.com/rentals/en">Rentals</a></li>
+                                    <li><a href="https://www.operabase.com/highlights/en">Highlights</a></li>
+                                    <li><a href="en.htm">Statistics</a></li>
+                                    <li><a href="https://www.operabase.com/artists/en">Artists</a></li>
+                                    <li><a href="https://www.operabase.com/onthisday/en">On these days</a></li>
+                                </ul>
+                        </div>
+                        <div class="col-sm-6 col-lg-3 m-b-15">
+                            <h5 class="font-size-20 m-b-15">New & Rare</h5>
+                            <div class="p-r-30 p-r-xs-0">
+								There are over 25,000 performances of opera every year. Use the New & Rare listing to find the more unusual works, the rarities and the world premieres.                            </div>
+                            <p class="m-t-13">
+                                <a href="https://www.operabase.com/new-and-rare/en"> Go to listing</a>
+                            </p>
+                        </div>
+                        <div class="col-sm-6 col-lg-3 m-b-15">
+                            <h5 class="font-size-20 m-b-15">Operabase Professional</h5>
+                            <ul class="no-bullets p-0">
+                                <li class="m-b-10"><a href="https://www.operabase.com/pro/en">For Arts Organisations</a> for theatres, festivals and orchestras</li>
+                                <li class="m-b-10"><a href="https://www.operabase.com/proartist/en">For Artists</a> for all professional artists active in the world of opera and classical music</li>
+                                <li class="m-b-10"><a href="https://www.operabase.com/proagent/en">For Agents</a> for artist managers</li>
+                            </ul>
+                        </div>
+            </div>
+            <div id="footer_warning" class="row d_none">
+                <div class="footer-warning-container m-t-15">
+					<button id="cookieBtn" class="float-right m-l-20">OK, I AGREE</button>
+                    <p>The information on the site is compiled in good faith from published opera house information. However, repertoire, venues, dates of performances and particularly casting are subject to changes. Therefore please check with the opera house before booking, as we can accept no responsibility for inaccuracies | <a href="https://www.operabase.com/cookpol/en">Cookie policy</a></p>				</div>
+            </div>
+
+        </footer>
+		<script data-cfasync="false" src="https://www.operabase.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+		<script defer src="https://www.operabase.com/ressources/js/proscripts.js?1584072186"></script>
+
+        			<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/6012578.js"></script>
+		
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.eu01.nr-data.net","licenseKey":"e507aad688","applicationID":"638526","transactionName":"MhBSZQoZWBZQV0FQWQtaZUMRV18LVVFNF0YNBQ==","queueTime":0,"applicationTime":6,"atts":"HldRE0IDSxg=","errorBeacon":"bam.eu01.nr-data.net","agent":""}</script></body>
+</html>

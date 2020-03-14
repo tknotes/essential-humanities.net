@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en" lang="en" dir="ltr"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VgAHWF9UDRACU1hRBQMBVA==",licenseKey:"NRJS-4c4eb29f17cb78c4f91",applicationID:"27932262"};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(21),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(22),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),c.xhrWrappable&&t(10),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(9),s=t(8),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof x&&(this.bstStart=y.now())}),o.on(w,function(t,n){var e=t[0];e instanceof x&&i("bst",[e,n,this.bstStart,y.now()])}),a.on(m,function(t,n,e){this.bstStart=y.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,y.now(),this.bstType])}),s.on(m,function(){this.bstStart=y.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,y.now(),"requestAnimationFrame"])}),o.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),o.on(g+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){function r(t,n,e){var r=t[n];"function"==typeof r&&(t[n]=function(){var t=i(arguments),n={};o.emit(e+"before-start",[t],n);var a;n[m]&&n[m].dt&&(a=n[m].dt);var s=r.apply(this,t);return o.emit(e+"start",[t,a],s),s.then(function(t){return o.emit(e+"end",[null,t],s),t},function(t){throw o.emit(e+"end",[t],s),t})})}var o=t("ee").get("fetch"),i=t(22),a=t(21);n.exports=o;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,l=s.Response,p=s.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,n){r(d[h],n,f),r(l[h],n,f)}),r(s,"fetch",c),o.on(c+"end",function(t,n){var e=this;if(n){var r=n.headers.get("content-length");null!==r&&(e.rxSize=r),o.emit(c+"done",[null,n],e)}else o.emit(c+"done",[t],e)}))},{}],7:[function(t,n,e){var r=t("ee").get("history"),o=t("wrap-function")(r);n.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,n,e){var r=t("ee").get("raf"),o=t("wrap-function")(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],9:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t("wrap-function")(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],10:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",s)}function i(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];n.exports=u;var x=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,n,e){function r(t){if(!i(t))return null;var n=window.NREUM;if(!n.loader_config)return null;var e=(n.loader_config.accountID||"").toString()||null,r=(n.loader_config.agentID||"").toString()||null,s=(n.loader_config.trustKey||"").toString()||null;if(!e||!r)return null;var c=a.generateCatId(),f=a.generateCatId(),u=Date.now(),d=o(c,f,u,e,r,s);return{header:d,guid:c,traceId:f,timestamp:u}}function o(t,n,e,r,o,i){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:o,id:t,tr:n,ti:e}};return i&&r!==i&&(s.d.tk=i),btoa(JSON.stringify(s))}function i(t){var n=!1,e=!1,r={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(r=NREUM.init.distributed_tracing,e=!!r.enabled),e)if(t.sameOrigin)n=!0;else if(r.allowed_origins instanceof Array)for(var o=0;o<r.allowed_origins.length;o++){var i=s(r.allowed_origins[o]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){n=!0;break}}return e&&n}var a=t(19),s=t(13);n.exports={generateTracePayload:r,shouldGenerateTrace:i}},{}],12:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);n.aborted||(e.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==n.status&&(n.status=0):i(this,t),e.cbTime=this.cbTime,u.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime]))}}function o(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.parsedOrigin=c(n),t.sameOrigin=t.parsedOrigin.sameOrigin}function i(t,n){t.params.status=n.status;var e=w(n,t.lastSize);if(e&&(t.metrics.rxSize=e),t.sameOrigin){var r=n.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,n.loadCaptureCalled=!1,t.addEventListener("load",function(e){i(n,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var e=f(this.parsedOrigin);e&&e.header&&(n.setRequestHeader("newrelic",e.header),this.dt=e)}),u.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=m(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<l;s++)n.addEventListener(d[s],this.listener,!1)}),u.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),u.on("xhr-load-added",function(t,n){var e=""+p(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,n){var e=""+p(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],n)}),u.on("removeEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],n)}),u.on("fn-start",function(t,n,e){n instanceof v&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,n){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)}),u.on("fetch-before-start",function(t){var n,e=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url&&(n=t[0].url),n&&(this.parsedOrigin=c(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var r=f(this.parsedOrigin);if(r&&r.header){var o=r.header;if("string"==typeof t[0]){var i={};for(var a in e)i[a]=e[a];i.headers=new Headers(e.headers||{}),i.headers.set("newrelic",o),this.dt=r,t.length>1?t[1]=i:t.push(i)}else t[0]&&t[0].headers&&(t[0].headers.append("newrelic",o),this.dt=r)}})}},{}],13:[function(t,n,e){var r={};n.exports=function(t){if(t in r)return r[t];var n=document.createElement("a"),e=window.location,o={};n.href=t,o.port=n.port;var i=n.href.split("://");!o.port&&i[1]&&(o.port=i[1].split("/")[0].split("@").pop().split(":")[1]),o.port&&"0"!==o.port||(o.port="https"===i[0]?"443":"80"),o.hostname=n.hostname||e.hostname,o.pathname=n.pathname,o.protocol=i[0],"/"!==o.pathname.charAt(0)&&(o.pathname="/"+o.pathname);var a=!n.protocol||":"===n.protocol||n.protocol===e.protocol,s=n.hostname===document.domain&&n.port===e.port;return o.sameOrigin=a&&(!n.hostname||s),"/"===o.pathname&&(r[t]=o),o}},{}],14:[function(t,n,e){function r(t,n){var e=t.responseType;return"json"===e&&null!==n?n:"arraybuffer"===e||"blob"===e||"json"===e?o(t.response):"text"===e||"document"===e||""===e||void 0===e?o(t.responseText):void 0}var o=t(16);n.exports=r},{}],15:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(21),s=t(22),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,n])}},{}],16:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],17:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],18:[function(t,n,e){function r(t,n){var e=t.getEntries();e.forEach(function(t){"first-paint"===t.name?c("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&c("timing",["fcp",Math.floor(t.startTime)])})}function o(t,n){var e=t.getEntries();e.length>0&&c("lcp",[e[e.length-1]])}function i(t){if(t instanceof u&&!l){var n,e=Math.round(t.timeStamp);n=e>1e12?Date.now()-e:f.now()-e,l=!0,c("timing",["fi",e,{type:t.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,s,c=t("handle"),f=t("loader"),u=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),s=new PerformanceObserver(o);try{a.observe({entryTypes:["paint"]}),s.observe({entryTypes:["largest-contentful-paint"]})}catch(d){}}if("addEventListener"in document){var l=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(t){document.addEventListener(t,i,!1)})}}},{}],19:[function(t,n,e){function r(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(n=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(n=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}n.exports={generateUuid:r,generateCatId:o}},{}],20:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],21:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],22:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],23:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([x,e,r,a]),a}}function p(t,n){g[t]=m(t).concat(n)}function h(t,n){var e=g[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return g[t]||[]}function w(t){return d[t]=d[t]||o(e)}function v(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var g={},y={},x={on:p,addEventListener:p,removeEventListener:h,emit:e,get:w,listeners:m,context:n,buffer:v,abort:a,aborted:!1};return x}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(21),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=b.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(21),u=t("ee"),d=t(20),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:g,features:{},xhrWrappable:x,userAgent:d};t(15),t(18),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,O=t(23)},{}],"wrap-function":[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(22),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}]},{},["loader",2,12,4,3]);</script>
+  <title>Economics A-Z terms beginning with A | The Economist</title>
+  <script type="text/javascript" src="https://cdn.auth0.com/js/auth0/9.3.1/auth0.min.js"></script>
+<link rel="shortcut icon" href="https://www.economist.com/sites/all/themes/econfinal/favicon.ico" type="image/x-icon" />
+<link type="text/css" rel="stylesheet" href="https://cdn.static-economist.com/assets/css/font-face.css"/>
+<script type="text/javascript">  function GPTGetCookie(cname) {
+      var name = cname + "=";
+      var ca = document.cookie.split(';');
+      for(var i=0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) === ' ') c = c.substring(1);
+          if (c.indexOf(name) === 0) return decodeURIComponent(c.substring(name.length, c.length));
+      }
+      return false;
+  }
+  var googletag = googletag || {};
+  var econgpt = econgpt || {};
+  googletag.cmd = googletag.cmd || [];
+  (function() {    var gads = document.createElement("script");
+    gads.async = true;
+    gads.type = "text/javascript";
+    var useSSL = "https:" == document.location.protocol;
+    gads.src = (useSSL ? "https:" : "http:") + "//www.googletagservices.com/tag/js/gpt.js";
+    var node = document.getElementsByTagName("script")[0];
+    node.parentNode.insertBefore(gads, node);  })();
+</script><script type="text/javascript">
+  googletag.cmd.push(function() {  econgpt.gpt_leaderboard_ad = googletag.defineSlot("/5605/teg.lasn/ajde", [[728,90], [970,90], [970,250]], 'gpt_leaderboard_ad').addService(googletag.pubads()).setTargeting('dcopt', 'ist').setTargeting('pos', 'ldr_top').setTargeting('tile', '1');  econgpt.gpt_mpu_no_wrapper_top_ad = googletag.defineSlot("/5605/teg.lasn/ajde", [20,20], 'gpt_mpu_no_wrapper_top_ad').addService(googletag.pubads()).setTargeting('pos', 'mpu_no_wrapper_top').setTargeting('tile', '6');  econgpt.gpt_top_mpu_ad = googletag.defineSlot("/5605/teg.lasn/ajde", [[300,250], [350,900], [350,600], [300,600]], 'gpt_top_mpu_ad').addService(googletag.pubads()).setTargeting('pos', 'mpu_top').setTargeting('tile', '7');  econgpt.gpt_ribbon_ad = googletag.defineSlot("/5605/teg.lasn/ajde", [351,49], 'gpt_ribbon_ad').addService(googletag.pubads()).setTargeting('pos', 'absribbon').setTargeting('tile', '8');  econgpt.gpt_pencil_slug_ad = googletag.defineSlot("/5605/teg.lasn/ajde", [970,35], 'gpt_pencil_slug_ad').addService(googletag.pubads()).setTargeting('pos', 'pslug_top').setTargeting('tile', '3');  econgpt.gpt_subscription_box = googletag.defineSlot("/5605/teg.lasn/ajde", [961,360], 'gpt_subscription_box').addService(googletag.pubads()).setTargeting('pos', 'hub_sub_banner');  econgpt.gpt_subscription_ad = googletag.defineSlot("/5605/teg.lasn/ajde", [223,90], 'gpt_subscription_ad').addService(googletag.pubads()).setTargeting('pos', 'sub_top').setTargeting('tile', '2');  econgpt.gpt_slider_ad = googletag.defineSlot("/5605/teg.lasn/ajde", [1,1], 'gpt_slider_ad').addService(googletag.pubads()).setTargeting('pos', 'slider').setTargeting('tile', '11');  econgpt.gpt_adcast = googletag.defineSlot("/5605/teg.lasn/ajde", [250,1000], 'gpt_adcast').addService(googletag.pubads()).setTargeting('pos', 'adcast').setTargeting('tile', '12');  econgpt.gpt_button_ad_1 = googletag.defineSlot("/5605/teg.lasn/ajde", [125,125], 'gpt_button_ad_1').addService(googletag.pubads()).setTargeting('pos', 'button1');  econgpt.gpt_button_ad_2 = googletag.defineSlot("/5605/teg.lasn/ajde", [125,125], 'gpt_button_ad_2').addService(googletag.pubads()).setTargeting('pos', 'button2');  econgpt.gpt_button_ad_3 = googletag.defineSlot("/5605/teg.lasn/ajde", [125,125], 'gpt_button_ad_3').addService(googletag.pubads()).setTargeting('pos', 'button3');  econgpt.gpt_button_ad_4 = googletag.defineSlot("/5605/teg.lasn/ajde", [125,125], 'gpt_button_ad_4').addService(googletag.pubads()).setTargeting('pos', 'button4');  econgpt.gpt_button_ad_5 = googletag.defineSlot("/5605/teg.lasn/ajde", [125,125], 'gpt_button_ad_5').addService(googletag.pubads()).setTargeting('pos', 'button5');  econgpt.gpt_button_ad_6 = googletag.defineSlot("/5605/teg.lasn/ajde", [125,125], 'gpt_button_ad_6').addService(googletag.pubads()).setTargeting('pos', 'button6');  econgpt.gpt_bottom_mpu_ad = googletag.defineSlot("/5605/teg.lasn/ajde", [[300,250], [50,50], [300,600]], 'gpt_bottom_mpu_ad').addService(googletag.pubads()).setTargeting('pos', 'mpu_bottom').setTargeting('tile', '9');  econgpt.gpt_bottom_right_mpu_ad = googletag.defineSlot("/5605/teg.lasn/ajde", [[300,250], [45,45]], 'gpt_bottom_right_mpu_ad').addService(googletag.pubads()).setTargeting('pos', 'mpu_bottom_right').setTargeting('tile', '10');    googletag.pubads().setTargeting('subs', 'n').setTargeting('sdn', 'n');
+    var subs = 'n';
+    // The ec_omniture_user_sub cookie has info about the user's subscription.
+    // Set subs=[y/n] based on the cookie.
+    var sub_arr_regex = /((print|digital)-subscriber|ent-product)/;
+    if (sub_arr_regex.test(document.cookie) === true) {
+      subs = 'y';
+    }
+    googletag.pubads().setTargeting("subs", subs);    // Set etear variable based on the cookie
+    var etear_cookie_val = GPTGetCookie('ec_ads_etear');
+    if (etear_cookie_val) {
+      etear = etear_cookie_val;
+      googletag.pubads().setTargeting("etear", etear);
+    }
+    googletag.pubads().enableSingleRequest();    googletag.pubads().collapseEmptyDivs();    googletag.enableServices();
+  });
+</script><script type="text/javascript">/* global Econ */
+/**
+ * Add event listeners to GPT ad rendering.
+ *
+ * @param context
+ */
+window.Econ = typeof Econ !== 'undefined' ? Econ : {};
+Econ.gpt = Econ.gpt || {};
+Econ.gpt.attach = Econ.gpt.attach || {};(function(document){
+  "use strict";  var deltaPrefix = 'block-ec_ads-',
+      deltaSuffix = '_ad';
+  Econ.gpt.wide_leader = false;
+  Econ.gpt.house_ad_leader = false;
+  Econ.gpt.house_ad_billboard = false;
+  /**
+   * Implements Econ.gpt.attach.HOOK
+   * @param googletag_ref
+   */
+  Econ.gpt.attach.ecAds = function(googletag_ref) {
+    googletag_ref.pubads().addEventListener('slotRenderEnded', function(event) {
+      var pos = event.slot.getTargeting("pos")[0],
+          adBlock,
+          adLabel,
+          domSlotID = event.slot.getSlotId().getDomId(),
+          domSlot = document.getElementById(domSlotID),
+          domStyles,
+          adSize = Number(event.size[0]),
+          domParents,
+          billBoardWidth = 970;      // When ads are rendered in the ldr_top slot,
+      // we check the size so we know if we need to show the pencil slug or not.
+      if (pos === "ldr_top") {
+        // If it is fully wide, then remove the subscription ad.
+        if (adSize === billBoardWidth) {
+          Econ.gpt.wide_leader = true;
+          // We need to call this behavior because if we are in async mode, the ads are called AFTER document-ready
+          // and the behavior may have already been called before the ad finished rendering.
+          Drupal.behaviors.ecGPTPencilSlug(document);
+          if (!Econ.gpt.house_ad_billboard) {
+            Econ.gpt.stickyBillboard();
+          }
+        }
+        else {
+          // Make the top ad sticky if it's a narrower leader ad and it is not a house ad.
+          if (!Econ.gpt.house_ad_leader) {
+            Econ.gpt.stickyAds();
+          }
+        }
+      }      // Remove empty ad slots. We stay in sync with the "collapsed div" motif. Google adds a display: none to ads
+      // that are empty, so we just put our wrapper insync with that.
+      domStyles = domSlot !== null ? window.getComputedStyle(domSlot) : '';
+      domParents = domSlot !== null ? domSlot.parentNode.parentNode.parentNode : '';
+      if (domSlot !== null &&
+         domParents.getAttribute('class').indexOf('block-ec_ads') !== -1) {
+        if (domStyles.getPropertyValue('display') === 'none' || adSize === 1) {
+          domParents.style.display = 'none';
+        }
+        else {
+          domParents.style.display = '';
+        }
+      }      if (domSlot.parentNode.getAttribute('class').indexOf('ec-ads-remove-if-empty') !== -1) {
+        domSlot.parentNode.className = domSlot.parentNode.className.replace('ec-ads-remove-if-empty','');
+      }        // For special reports sponsor ads. The POS for these is "undefined".
+      if (domSlotID.substr(0, 21) === 'gpt_sponsored_sr_logo') {
+        domSlot.style.float = 'right';
+      }      // For mobile, we are displaying ads using the refresh method,
+      // which means we need to restore the Advertisemnt label.
+      if (pos.substr(0,10) === 'mobile_mpu') {
+        adBlock = document.getElementById(deltaPrefix + pos + deltaSuffix);
+        if (adBlock.className.indexOf('processed') === -1) {
+          adBlock.insertBefore(adLabel, adBlock.firstChild);
+          adBlock.className += ' processed';
+        }
+      }
+    });
+  };
+})(window.document);
+</script>
+<link rel="canonical" href="https://www.economist.com/economics-a-to-z" />
+<meta name="description" content="The Economist offers authoritative insight and opinion on international news, politics, business, finance, science, technology and the connections between them." />
+<meta name="revisit-after" content="1 day" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@TheEconomist" />
+<meta property="fb:app_id" content="173277756049645" />
+<meta property="og:site_name" content="The Economist" />
+  <link rel="apple-touch-icon" sizes="144x144" href="https://www.economist.com/assets/apple-touch-icon-144x144.png" /><link rel="apple-touch-icon" sizes="120x120" href="https://www.economist.com/assets/apple-touch-icon-120x120.png" /><link rel="apple-touch-icon" sizes="114x114" href="https://www.economist.com/assets/apple-touch-icon-114x114.png" /><link rel="apple-touch-icon" sizes="72x72" href="https://www.economist.com/assets/apple-touch-icon-72x72.png" /><link rel="apple-touch-icon" href="https://www.economist.com/assets/touch-icon-iphone.png" /><link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.economist.com/assets/apple-touch-icon-144x144-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://www.economist.com/assets/apple-touch-icon-120x120-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://www.economist.com/assets/apple-touch-icon-114x114-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://www.economist.com/assets/apple-touch-icon-72x72-precomposed.png"><link rel="apple-touch-icon-precomposed" href="https://www.economist.com/assets/touch-icon-iphone-precomposed.png">  <link type="text/css" rel="stylesheet" media="all" href="https://www.economist.com/sites/default/files/css/css_bc4a86ad7207f394c09528a5e73b028b.css" />
+  <!--[if IE 9]>
+<link rel="stylesheet" href="/sites/all/themes/econfinal/styles/ie9.css?S" />
+<![endif]-->
+<!--[if IE 8]>
+<link rel="stylesheet" href="/sites/all/themes/econfinal/styles/ie8.css?S" />
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->  <link rel="publisher" href="https://plus.google.com/100470681032489535736" />
+  <script type="text/javascript" src="https://www.economist.com/sites/default/files/js/js_445cf8c0d784bade7f26e724ea79c78b.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","auth0":{"auth0_domain":"authenticate.economist.com","auth0_client_id":"MsDOcpdnfoSmqc7r4YHZHQ2idBUuHIhX","auth0_redirect_uri":"https:\/\/www.economist.com\/auth0\/callback","drupal_logged_in":false},"ec_snowplow_settings":{"hierarchy":["economics-a-to-z"],"type":"economics-a-to-z","uid":"","status":"loggedout","account_type":"free","subscription_id":"","class":"","entitlement":"","duration":""},"omniture":{"click_tracking":[{"name":"mh-nav|Business \u0026 finance|Which MBA?","selector":".mh-nav a[href^='\/whichmba']","event":"click","edge_server":"economistcomprod"},{"name":"rightrail|social_share|facebook","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"rightrail|social_share|twitter","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"rightrail|social_share|linked-in","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"rightrail|social_share|plusone","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"rightrail|social_share|tumblr","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"rightrail|social_share|instagram","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"rightrail|social_share|youtube","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"rightrail|social_share|rss","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"rightrail|social_share|newsletters","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|contact_us","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|help","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|my_account","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|subscribe","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|print_edition","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|digital_editions","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|events","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|jobs_economist_com","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|manage_cookies","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|united_states","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|britain","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|europe","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|china","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|asia","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|americas","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|middle_east_africa","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|international","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|business_finance","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|economics","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|markets_data","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|science_technology","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|special_reports","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|culture","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|multimedia_library","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|the_economist_debates","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|letters_to_the_editor","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|the_economist_quiz","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|bagehots_notebook","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|buttonwoods_notebook","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|democracy_in_america","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|erasmus","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|free_exchange","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|game_theory","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|graphic_detail","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|gulliver","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|prospero","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|the_economist_explains","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|topics","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|economics_a_z","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|the_world_in","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|which_mba_","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|mba_services","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|the_economist_gmat_tutor","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|the_economist_gre_tutor","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|executive_education_navigator","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|reprints_and_permissions","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|the_economist_group","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|the_economist_intelligence_unit","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|the_economist_intelligence_unit_store","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|the_economist_corporate_network","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|ideas_people_media","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|1843_magazine","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|roll_call","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|cq","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|eurofinance","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|the_economist_store","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|editorial_staff","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|modern_slavery_statement","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|view_complete_site_index_","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"footer|contact_us","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"footer|help","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"footer|about_us","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"footer|advertise_with_us","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"footer|staff_books","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"footer|careers","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"footer|site_index","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"footer|modern_slavery_statement","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"footer|accessibility","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"footer|privacy_policy","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"footer|cookie_policy","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"footer|terms_of_use","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"}],"click_tracking_frames":[],"edge_server":"economistcomprod","drupal_version":"6.22","drupal_subsection":""},"insert":{"widgets":{"imagefield_widget":{"fields":{"use_original_size":"input:checked[name$=\"[use_original_size]\"]","image_link":"input:textfield[name$=\"[image_link]\"]","slim_image":"input:checked[name$=\"[slim_image]\"]"}}}},"jcarousel":{"ajaxPath":"\/jcarousel\/ajax\/views"},"ec_user_settings":{"auto_select_country":true},"cdn":{"cdnPath":"\/\/cdn.static-economist.com","cdnPathPNG":"\/\/cdn.static-economist.com"},"ecGPT":{"isAsync":true},"ecAds":{"ad_network_id":"\/5605","ad_site":"teg","ad_zone":"ajde","sitecode":"lasn","ad_call_type":"gpt","subs":"n","sdn":"n","sz_nojs":"20x20"},"ec_mostx_active_tab":"commented","EconStyles":[{"title":"Pull quote","description":"Better reading","outputTemplate":"\u003cdiv class=\"pullquote\"\u003e{$selection}\u003c\/div\u003e"}],"ecRegOverlayShowOnLoad":true,"EcRegOverlayEnabled":true,"ecPixelTracking":{"adroit":{"countries":["US"],"scriptUrl":"\/\/www.imiclk.com\/cgi\/r.cgi?m=3\u0026mid=Ay3XMfb1\u0026ptid=HOME"},"adsrvr":{"countries":["IN"],"regions":["AP"],"scriptUrl":"\/\/insight.adsrvr.org\/track\/evnt\/?adv=5gu6big\u0026ct=0:2qbfzvew\u0026fmt=3"},"fosina":{"countries":["US"],"scriptUrl":"\/\/secure.fastclick.net\/w\/roitrack.cgi?aid=1000045446"},"media_math":{"countries":["IN"],"regions":["AP"],"imageUrl":"\/\/insight.adsrvr.org\/track\/evnt\/?adv=5gu6big\u0026ct=0:zx1ys9qy\u0026fmt=3"},"the_trade_desk":{"countries":["IN"],"regions":["AP"],"scriptUrl":"\/\/pixel.mathtag.com\/event\/js?mt_id=413291\u0026mt_adid=120100\u0026v1=\u0026v2=\u0026v3=\u0026s1=\u0026s2=\u0026s3="},"turn":{"countries":["IN"],"regions":["AP"],"imageUrl":"\/\/r.turn.com\/r\/beacon?b2=R_QfAflH-jzroqgoR-7UpyoPLd4h6zhRDu90-2mSJwKPFE1jUk1i_ZKaX90YPbtpfum-xQNkFnpSs2wXvdPFSg\u0026cid=\u0026bprice="}},"q":"economics-a-to-z","alias":"economics-a-to-z","uid":0,"cookieDomain":".economist.com","ecHomepage":{"isFront":false},"ec_google_cse":{"cx":"013751040265774567329:ylv-hrexwbc","resultsUrl":"https:\/\/www.economist.com\/search\/gcs","gname":"economist-search","queryParameterName":"ss","fromurl":"\/economics-a-to-z?term=classicaleconomics\u0026CFID=134209776\u0026CFTOKEN=32109126","noResultsString":"Your query returned no results. Please try a different search term. (Did you check your spelling? You can also try rephrasing your query or using more general search terms.)","isResultsPage":false,"omnitureTrackerId":"gsc-i-id1"},"loginform":{"action":"httpss:\/\/www.economist.com\/user\/login?destination=economics-a-to-z%3Fterm%3Dclassicaleconomics%26CFID%3D134209776%26CFTOKEN%3D32109126"},"formvalidation":{"formname":"#user-login"},"popups":{"originalCSS":{"\/modules\/node\/node.css":1,"\/modules\/poll\/poll.css":1,"\/modules\/system\/defaults.css":1,"\/modules\/system\/system.css":1,"\/modules\/system\/system-menus.css":1,"\/modules\/user\/user.css":1,"\/sites\/all\/modules\/cck\/theme\/content-module.css":1,"\/sites\/all\/modules\/contrib\/oembed\/oembed.css":1,"\/sites\/all\/modules\/ctools\/css\/ctools.css":1,"\/sites\/all\/modules\/custom\/ec_cookie_message\/css\/ec_cookie_message.css":1,"\/sites\/all\/modules\/custom\/ec_cookie_message\/css\/evidon.css":1,"\/sites\/all\/modules\/custom\/ec_messaging\/css\/ec_messaging.css":1,"\/sites\/all\/modules\/custom\/ec_messaging\/css\/ec_messaging_beta_bar.css":1,"\/sites\/all\/modules\/date\/date.css":1,"\/sites\/all\/libraries\/jquery.ui\/themes\/base\/jquery-ui.css":1,"\/sites\/all\/modules\/date\/date_popup\/themes\/datepicker.1.7.css":1,"\/sites\/all\/modules\/date\/date_popup\/themes\/jquery.timeentry.css":1,"\/sites\/all\/modules\/ec_components\/css\/ec_tip.css":1,"\/sites\/all\/modules\/ec_vote\/css\/ec_vote.css":1,"\/sites\/all\/modules\/filefield\/filefield.css":1,"\/sites\/all\/modules\/logintoboggan\/logintoboggan.css":1,"\/sites\/all\/modules\/video_filter\/video_filter.css":1,"\/sites\/all\/modules\/wysiwyg_fontcolor\/tinymce\/fontcolor\/css\/fontcolor.css":1,"\/sites\/all\/modules\/cck\/modules\/fieldgroup\/fieldgroup.css":1,"\/sites\/all\/modules\/views\/css\/views.css":1,"\/sites\/all\/modules\/ec_omniture\/ec_omniture_link_tracking.css":1,"\/sites\/all\/modules\/ec_components\/css\/ec_components.css":1,"\/sites\/all\/modules\/ec_ads\/css\/ec_ads.css":1,"\/sites\/all\/modules\/ec_ads\/css\/ec_ads_topic_ribbon.css":1,"\/sites\/all\/modules\/custom\/ec_social\/ec-social-share-follow.css":1,"\/sites\/all\/modules\/ec_ads\/css\/ec_ads_slider.css":1,"\/sites\/all\/modules\/ec_ads\/css\/ec_ads_overlay.css":1,"\/sites\/all\/modules\/custom\/wysiwyg_econstyles\/tinymce\/econstyles\/css\/econstyles_editor.css":1,"\/sites\/all\/modules\/ec_offers\/css\/ec-offers.css":1,"\/sites\/all\/modules\/wysiwyg_fontcolor\/tinymce\/fontcolor\/css\/fontcolor_editor.css":1,"\/sites\/all\/modules\/custom\/ec_google_cse\/css\/ec_google_cse.css":1,"\/sites\/all\/themes\/econfinal\/styles\/reset.css":1,"\/sites\/all\/themes\/econfinal\/styles\/grid.css":1,"\/sites\/all\/themes\/econfinal\/styles\/style.css":1,"\/sites\/all\/themes\/econfinal\/styles\/components.css":1,"\/sites\/all\/themes\/econfinal\/styles\/typography.css":1,"\/sites\/all\/themes\/econfinal\/styles\/skins.css":1,"\/sites\/all\/themes\/econfinal\/styles\/user-profile-comments.css":1,"\/sites\/all\/themes\/econfinal\/styles\/node-guest_contribution-tpl.css":1,"\/sites\/all\/themes\/econfinal\/styles\/page-header.css":1,"\/sites\/all\/themes\/econfinal\/styles\/page-navigation.css":1,"\/sites\/all\/themes\/econfinal\/styles\/page-ads.css":1,"\/sites\/all\/themes\/econfinal\/styles\/page-footer.css":1,"\/sites\/all\/themes\/econfinal\/styles\/node-homepage.css":1,"\/sites\/all\/themes\/econfinal\/styles\/page-taxonomy-term.css":1,"\/sites\/all\/themes\/econfinal\/styles\/node-issue.css":1,"\/sites\/all\/themes\/econfinal\/styles\/node-page-tools.css":1,"\/sites\/all\/themes\/econfinal\/styles\/node-print-cover.css":1,"\/sites\/all\/themes\/econfinal\/styles\/node-print-sub-ad.css":1,"\/sites\/all\/themes\/econfinal\/styles\/node-poll-article.css":1,"\/sites\/all\/themes\/econfinal\/styles\/captcha.css":1,"\/sites\/all\/themes\/econfinal\/styles\/site-index.css":1,"\/sites\/all\/themes\/econfinal\/styles\/inform-component.css":1,"\/sites\/all\/themes\/econfinal\/styles\/pager.css":1,"\/sites\/all\/themes\/econfinal\/styles\/block-blogs.css":1,"\/sites\/all\/themes\/econfinal\/styles\/block-products-events.css":1,"\/sites\/all\/themes\/econfinal\/styles\/block-radio.css":1,"\/sites\/all\/themes\/econfinal\/styles\/block-most-popular.css":1,"\/sites\/all\/themes\/econfinal\/styles\/block-brightcove_player-playlist.css":1,"\/sites\/all\/themes\/econfinal\/styles\/topic-page.css":1,"\/sites\/all\/themes\/econfinal\/styles\/node-rss-page.css":1,"\/sites\/all\/themes\/econfinal\/styles\/node-page-tpl.css":1,"\/sites\/all\/themes\/econfinal\/styles\/node-promotions-page-tpl.css":1,"\/sites\/all\/themes\/econfinal\/styles\/media-directory.css":1,"\/sites\/all\/themes\/econfinal\/styles\/ec-user.css":1,"\/sites\/all\/themes\/econfinal\/styles\/ec-user-block.css":1,"\/sites\/all\/themes\/econfinal\/styles\/ec-highlight-block.css":1,"\/sites\/all\/themes\/econfinal\/styles\/ec-glossary.css":1,"\/sites\/all\/themes\/econfinal\/styles\/ec-charts.css":1,"\/sites\/all\/themes\/econfinal\/styles\/ec-sections.css":1,"\/sites\/all\/themes\/econfinal\/styles\/node-event.css":1,"\/sites\/all\/themes\/econfinal\/styles\/interactive-map.css":1,"\/sites\/all\/themes\/econfinal\/styles\/vendor-prexifed.css":1,"\/sites\/all\/themes\/econfinal\/styles\/ec-topic-widget.css":1},"originalJS":{"\/sites\/all\/modules\/ec_ads\/ec_gpt\/js\/ec_gpt.js":1,"\/sites\/all\/modules\/ec_ajax_form\/js\/ec_ajax_form.js":1,"\/sites\/all\/modules\/ec_base\/js\/ec_base.js":1,"\/sites\/all\/modules\/ec_base\/js\/ec_console.js":1,"\/sites\/all\/modules\/ec_base\/js\/ec_analytics.js":1,"\/sites\/all\/modules\/ec_base\/js\/plugins\/jquery.ec_timeago.js":1,"\/sites\/all\/modules\/ec_base\/js\/plugins\/jquery.cookie.js":1,"\/sites\/all\/modules\/ec_base\/js\/plugins\/jquery.json.js":1,"\/sites\/all\/libraries\/qtip\/jquery.qtip-1.0.0-rc3.min.js":1,"\/sites\/all\/modules\/ec_components\/js\/ec_tip.js":1,"\/sites\/all\/modules\/ec_vote\/js\/ec_vote.js":1,"\/sites\/all\/modules\/jquery_aop\/misc\/jquery.aop.js":1,"\/sites\/all\/modules\/jsonify\/jsonify.js":1,"\/sites\/all\/modules\/swftools\/shared\/swfobject2\/swfobject.js":1,"\/sites\/all\/modules\/ec_user\/js\/ec_user.js":1,"\/sites\/all\/libraries\/simplemodal\/jquery.simplemodal.1.4.1.min.js":1,"\/sites\/all\/libraries\/jquery_expander\/jquery.expander.min.js":1,"\/sites\/all\/modules\/ec_base\/js\/ec_overlays.js":1,"\/sites\/all\/modules\/ec_ads\/js\/stepcarousel.js":1,"\/sites\/all\/modules\/ec_mostx\/js\/ec_mostx.js":1,"\/sites\/all\/modules\/ec_ads\/js\/ec_ads_slider.js":1,"\/sites\/all\/modules\/custom\/ec_cookie_message\/js\/evidon.js":1,"\/sites\/all\/modules\/custom\/ec_overlay\/js\/ec-overlay.js":1,"\/sites\/all\/modules\/custom\/ec_pixel_tracking\/ec_pixel_tracking_adroit\/js\/ec_pixel_tracking_adroit.js":1,"\/sites\/all\/modules\/custom\/ec_pixel_tracking\/ec_pixel_tracking_adsrvr\/js\/ec_pixel_tracking_adsrvr.js":1,"\/sites\/all\/modules\/custom\/ec_pixel_tracking\/ec_pixel_tracking_fosina\/js\/ec_pixel_tracking_fosina.js":1,"\/sites\/all\/modules\/custom\/ec_pixel_tracking\/ec_pixel_tracking_media_math\/js\/ec_pixel_tracking_media_math.js":1,"\/sites\/all\/modules\/custom\/ec_pixel_tracking\/ec_pixel_tracking_tapad\/ec_pixel_tracking_tapad.js":1,"\/sites\/all\/modules\/custom\/ec_pixel_tracking\/ec_pixel_tracking_the_trade_desk\/js\/ec_pixel_tracking_the_trade_desk.js":1,"\/sites\/all\/modules\/custom\/ec_pixel_tracking\/ec_pixel_tracking_turn\/js\/ec_pixel_tracking_turn.js":1,"\/sites\/all\/modules\/ec_ads\/js\/ec_ads.js":1,"\/sites\/all\/libraries\/react\/build\/react.min.js":1,"\/sites\/all\/libraries\/react\/build\/react-with-addons.min.js":1,"\/sites\/all\/libraries\/react\/build\/react-dom.min.js":1,"\/sites\/all\/libraries\/react\/build\/JSXTransformer.js":1,"\/sites\/all\/modules\/custom\/ec_google_cse\/js\/ec_google_cse.js":1,"\/sites\/all\/modules\/custom\/ec_google_cse\/js\/non_require_js_loader.js":1,"\/sites\/all\/modules\/custom\/ec_social\/ec_social.js":1,"\/sites\/all\/modules\/ajax\/jquery\/jquery.a_form.packed.js":1,"\/sites\/all\/modules\/ajax\/ajax.js":1,"\/sites\/all\/modules\/custom\/auth0\/js\/auth0.js":1,"\/sites\/all\/modules\/custom\/ec_cookie_message\/js\/ec_cookie_message.js":1,"\/sites\/all\/modules\/custom\/ec_messaging\/js\/ec_messaging.js":1,"\/sites\/all\/modules\/custom\/ec_snowplow\/js\/ec_snowplow.js":1,"\/sites\/all\/modules\/ec_omniture\/ec_omniture_link_tracking.js":1,"\/sites\/all\/modules\/ec_ads\/js\/ec_ads_banner.js":1,"\/sites\/all\/themes\/econfinal\/js\/page-header.js":1,"\/sites\/all\/themes\/econfinal\/js\/node-page-tools.js":1,"\/sites\/all\/themes\/econfinal\/js\/node-poll-article.js":1,"\/sites\/all\/themes\/econfinal\/js\/site-index.js":1,"\/sites\/all\/themes\/econfinal\/js\/node-guest_contribution.js":1,"\/sites\/all\/themes\/econfinal\/js\/AC_OETags.js":1,"\/sites\/all\/themes\/econfinal\/js\/ec-blogs.js":1,"\/sites\/all\/themes\/econfinal\/js\/ec-messages.js":1,"\/sites\/all\/themes\/econfinal\/js\/interactive-map.js":1,"\/sites\/all\/themes\/econfinal\/js\/plugins\/drag.js":1,"\/sites\/all\/themes\/econfinal\/js\/plugins\/jquery.color.js":1,"\/sites\/all\/themes\/econfinal\/js\/plugins\/jquery.form.js":1,"\/sites\/all\/themes\/econfinal\/js\/plugins\/jquery.autogrow.js":1,"\/sites\/all\/themes\/econfinal\/js\/plugins\/jquery.timer.js":1,"\/sites\/all\/themes\/econfinal\/js\/plugins\/jquery.hoverIntent.js":1,"\/sites\/all\/themes\/econfinal\/js\/plugins\/modernizr_2.8.3.min.js":1,"\/sites\/all\/themes\/econfinal\/js\/plugins\/jquery.flash.min.js":1,"\/sites\/all\/themes\/econfinal\/js\/plugins\/jcarousellite_1.0.1.min.js":1}}});
+//--><!]]>
+</script>
+    <script type="text/javascript">
+    $('html').addClass('js');
+  </script>
+    </head>
+
+<body class="not-front not-logged-in page-economics-a-to-z one-sidebar sidebar-right t11-mobile-overlay path-economics-a-to-z world-menu business-menu economics-menu printedition-menu science-technology-menu culture-menu">
+<noscript>You need to enable JavaScript to run this app.</noscript>
+      
+  <!-- Begin Tealium Integration -->
+  <script type="text/javascript">
+    <!--//--><![CDATA[//><!--
+    var utag_data = {"user_status":"anonymous","bulk_subscriber":"anonymous|none","dfp_zone":"ajde","dfp_site":"LASN","dfp_targeting":"5605\/teg.lasn\/ajde","section":"","issue_date":"","content_source":"web","content_type":"other","story_title":"","subsection":""};
+    //--><!]]>
+  </script>
+
+      <!-- Loading script asynchronously -->
+    <script type="text/javascript">
+      (function(a,b,c,d){
+        a='//tags.tiqcdn.com/utag/teg/main/prod/utag.js';
+        b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
+        a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
+      })();
+    </script>
+  
+  <!-- End Tealium Integration -->
+            <div id="leaderboard" class="clearfix">
+    <div id="block-ec_ads-leaderboard_ad" class="block block-ec_ads 
+ec-ads-gpt">
+    <div class="content clearfix">
+    <div id="leaderboard-ad"><!-- Site: Commerce.  Zone: Economics A-Z |  --> <div id="gpt_leaderboard_ad" ><script type="text/javascript">  googletag.cmd.push(function() {      googletag.display("gpt_leaderboard_ad");  });
+</script><noscript>
+  <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5605/teg.lasn/ajde&amp;t=subs%3Dn%26sdn%3Dn%26dcopt%3Dist%26pos%3Dldr_top&amp;sz=728x90%7C970x90%7C970x250&amp;tile=1&amp;c=679733243" target="_blank">
+   <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5605/teg.lasn/ajde&amp;t=subs%3Dn%26sdn%3Dn%26dcopt%3Dist%26pos%3Dldr_top&amp;sz=728x90%7C970x90%7C970x250&amp;tile=1&amp;c=679733243" />
+  </a>
+</noscript></div></div>  </div>
+</div>
+
+<div id="block-ec_ads-subscription_ad" class="block block-ec_ads 
+ec-ads-gpt">
+    <div class="content clearfix">
+    <div id="subslug-ad"><!-- Site: Commerce.  Zone: Economics A-Z |  --> <div id="gpt_subscription_ad" ><script type="text/javascript">  googletag.cmd.push(function() {      googletag.display("gpt_subscription_ad");  });
+</script><noscript>
+  <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5605/teg.lasn/ajde&amp;t=subs%3Dn%26sdn%3Dn%26pos%3Dsub_top&amp;sz=223x90&amp;tile=2&amp;c=679733243">
+   <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5605/teg.lasn/ajde&amp;t=subs%3Dn%26sdn%3Dn%26pos%3Dsub_top&amp;sz=223x90&amp;tile=2&amp;c=679733243" />
+  </a>
+</noscript></div></div>  </div>
+</div>
+
+<div id="block-ec_ads-pencil_slug_ad" class="block block-ec_ads 
+ec-ads-gpt">
+    <div class="content clearfix">
+    <!-- Site: Commerce.  Zone: Economics A-Z |  --> <div id="gpt_pencil_slug_ad" ><script type="text/javascript">  googletag.cmd.push(function() {      googletag.display("gpt_pencil_slug_ad");  });
+</script><noscript>
+  <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5605/teg.lasn/ajde&amp;t=subs%3Dn%26sdn%3Dn%26pos%3Dpslug_top&amp;sz=970x35&amp;tile=3&amp;c=679733243">
+   <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5605/teg.lasn/ajde&amp;t=subs%3Dn%26sdn%3Dn%26pos%3Dpslug_top&amp;sz=970x35&amp;tile=3&amp;c=679733243" />
+  </a>
+</noscript></div>  </div>
+</div>
+
+  </div>
+<header class="mh">
+  <!-- 
+  To use as a standalone component please wrap it up into a <header class="mh"></header> 
+-->
+<div class="mh-stripe">
+  <div class="mh-stripe-wrap">
+    <ul class="mh-user-menu"><li class="first"><span>More from The Economist</span><ul><li class="first"><a href="https://www.economist.com/digital">The Economist digital editions</a></li>
+<li><a href="https://www.economist.com/newsletters">Newsletters</a></li>
+<li><a href="https://www.economist.com/events">Events</a></li>
+<li><a href="http://jobs.economist.com">Jobs.Economist.com</a></li>
+<li><a href="http://shop.economist.com/">The Economist Store</a></li>
+<li class="last"><a href="https://www.economist.com/bookmarks" data-ec-bookmark-click="20|16846019|bookmark &gt; more from the economist &gt; BM saved" data-ec-omniture="masthead|act_prod|bookmarks">Timekeeper reading list</a></li>
+</ul></li>
+<li class="even"><span>My Subscription</span><ul><li class="first"><a href="http://econ.st/1lAkCOR">Subscribe to The Economist</a></li>
+<li><a href="https://www.economist.com/activate">Activate my digital subscription</a></li>
+<li><a href="https://www.economist.com/user">Manage my subscription</a></li>
+<li class="last"><a href="https://www.economist.com/products/renew">Renew</a></li>
+</ul></li>
+<li class="masthead-user"><a href="https://www.economist.com/user/login?destination=economics-a-to-z%3Fterm%3Dclassicaleconomics%26CFID%3D134209776%26CFTOKEN%3D32109126" class="show-login">Log in or register</a></li>
+<li class="masthead-subscribe even last"><a href="http://econ.st/2bnl6pE" class="show-subscribe">Subscribe</a></li>
+</ul>
+          <div class="mh-search">
+        <form action="https://google.com/search"  accept-charset="UTF-8" method="GET" id="search-theme-form">
+<div><div id="search" class="container-inline">
+  <div class="form-item clearfix" id="edit-search-theme-form-1-wrapper">
+ <label for="edit-search-theme-form-1">Search this site:</label>
+<input type="text" maxlength="128" name="query" id="edit-search-theme-form-1" size="15" value="" title="Enter the terms you wish to search for." autocorrect="off" class="form-text search-field" />
+</div>
+<input type="submit" name="op" id="edit-submit" value="Search"  class="form-submit" />
+<input type="hidden" name="form_id" id="edit-search-theme-form" value="search_theme_form"  />
+<input type="hidden" name="sitesearch" id="edit-sitesearch" value="economist.com"  />
+</div>
+
+</div></form>
+      </div>
+      </div> <!-- /.mh-stripe-wrap -->
+</div> <!-- /.mh-stripe -->  <div class="mh-nav">
+    <div class="mh-nav-wrap">
+              <h2 class="svg-logo"><a href="https://www.economist.com/"><img class="mh-logo" width="170" height="85" src="https://cdn.static-economist.com/sites/all/themes/econfinal/images/svg/logo.svg" alt="The Economist" /></a></h2>
+                    <nav>
+          <ul class="mh-nav-links"><li class="first"><a href="https://www.economist.com/content/politics-this-week" title="" class="sub-menu-link">World politics</a><ul class="mh-subnav"><li class="first"><a href="https://www.economist.com/content/politics-this-week">Politics this week</a></li>
+<li class="even"><a href="https://www.economist.com/sections/united-states">United States</a></li>
+<li><a href="https://www.economist.com/sections/britain">Britain</a></li>
+<li class="even"><a href="https://www.economist.com/sections/europe">Europe</a></li>
+<li><a href="https://www.economist.com/sections/china">China</a></li>
+<li class="even"><a href="https://www.economist.com/sections/asia">Asia</a></li>
+<li><a href="https://www.economist.com/sections/americas">Americas</a></li>
+<li class="even"><a href="https://www.economist.com/sections/middle-east-africa">Middle East &amp; Africa</a></li>
+<li class="last"><a href="https://www.economist.com/sections/international">International</a></li>
+</ul></li>
+<li class="even"><a href="https://www.economist.com/sections/business-finance" class="sub-menu-link">Business &amp; finance</a><ul class="mh-subnav"><li class="first"><a href="https://www.economist.com/sections/business-finance">All Business &amp; finance</a></li>
+<li class="even last"><a href="https://www.economist.com/whichmba">Which MBA?</a></li>
+</ul></li>
+<li class=""><a href="https://www.economist.com/sections/economics" class="sub-menu-link">Economics</a><ul class="mh-subnav"><li class="first"><a href="https://www.economist.com/sections/economics">All Economics</a></li>
+<li class="even"><a href="https://www.economist.com/economics-a-to-z" class="active">Economics A-Z</a></li>
+<li class="last"><a href="https://www.economist.com/markets-data">Markets &amp; data</a></li>
+</ul></li>
+<li class="even"><a href="https://www.economist.com/sections/science-technology" class="sub-menu-link">Science &amp; technology</a><ul class="mh-subnav"><li class="first"><a href="https://www.economist.com/sections/science-technology">All Science &amp; technology</a></li>
+<li class="even last"><a href="https://www.economist.com/technology-quarterly" title="Technology Quarterly">Technology Quarterly</a></li>
+</ul></li>
+<li class=""><a href="https://www.economist.com/sections/culture" class="sub-menu-link">Culture</a><ul class="mh-subnav"><li class="first"><a href="https://www.economist.com/sections/culture">All Culture</a></li>
+<li class="even"><a href="http://www.1843magazine.com/">1843 Magazine</a></li>
+<li class="last"><a href="http://www.economist.com/economist-quiz">The Economist Quiz</a></li>
+</ul></li>
+<li class=" mh-two-col even"><a href="https://www.economist.com/blogs" class="sub-menu-link">Blogs</a><ul class="mh-subnav"><li class="first"><a href="https://www.economist.com/blogs">Latest updates</a></li>
+<li class="even"><a href="https://www.economist.com/blogs/bagehot">Bagehot’s notebook</a></li>
+<li><a href="https://www.economist.com/blogs/buttonwood" title="Financial markets">Buttonwood&#039;s notebook</a></li>
+<li class="even"><a href="https://www.economist.com/blogs/democracyinamerica" title="American politics">Democracy in America</a></li>
+<li><a href="https://www.economist.com/blogs/erasmus">Erasmus</a></li>
+<li class="even"><a href="https://www.economist.com/blogs/freeexchange" title="Economics">Free exchange</a></li>
+<li><a href="https://www.economist.com/blogs/gametheory" title="Sports">Game theory</a></li>
+<li class="even"><a href="https://www.economist.com/node/21011894" title="Data visualisation">Graphic detail</a></li>
+<li><a href="https://www.economist.com/blogs/gulliver" title="Business travel">Gulliver</a></li>
+<li class="even"><a href="https://www.economist.com/blogs/prospero" title="Books, arts and culture">Prospero</a></li>
+<li><a href="https://www.economist.com/blogs/economist-explains" title=" ">The Economist explains</a></li>
+<li class="even last"><a href="https://www.economist.com/blogs/openfuture" title="Open Future">Openfuture</a></li>
+</ul></li>
+<li class=""><a href="http://www.economist.com/debate" class="sub-menu-link">Debate</a><ul class="mh-subnav"><li class="first"><a href="http://www.economist.com/debate">Economist debates</a></li>
+<li class="even last"><a href="https://www.economist.com/content/letters-to-the-editor" title="">Letters to the editor</a></li>
+</ul></li>
+<li class="even"><a href="https://www.economist.com/multimedia" class="sub-menu-link">Multimedia</a><ul class="mh-subnav"><li class="first"><a href="http://films.economist.com">Economist Films</a></li>
+<li class="even"><a href="http://radio.economist.com">Economist Radio</a></li>
+<li class="last"><a href="https://www.economist.com/audio-edition">The Economist in audio</a></li>
+</ul></li>
+<li class="last"><a href="https://www.economist.com/printedition" title="" class="sub-menu-link">Print edition</a><ul class="mh-subnav"><li class="first"><a href="https://www.economist.com/printedition/">Current issue</a></li>
+<li class="even"><a href="https://www.economist.com/printedition/covers">Previous issues</a></li>
+<li><a href="https://www.economist.com/printedition/specialreports">Special reports</a></li>
+<li class="even"><a href="https://www.economist.com/content/politics-this-week">Politics this week</a></li>
+<li><a href="https://www.economist.com/content/business-this-week">Business this week</a></li>
+<li class="even"><a href="https://www.economist.com/sections/leaders">Leaders</a></li>
+<li><a href="https://www.economist.com/printedition/kallery">KAL&#039;s cartoon</a></li>
+<li class="even last"><a href="https://www.economist.com/sections/obituary">Obituaries</a></li>
+</ul></li>
+</ul>                  </nav>
+          </div>
+  </div> <!-- /.mh-nav -->
+</header> <!-- /header -->
+  <div id="page" class="container">
+    <a name="top" id="navigation-top"></a>
+
+            
+    <div id="columns" class="clearfix">
+              <div id="title-wide" class="clearfix">
+          <div class="grid-16 grid-first">
+            <h1  id="page-title">Economics A-Z terms beginning with A</h1>                                  </div>
+                  </div>
+                  
+      <div id="column-content" class="grid-10 grid-first clearfix">
+                                <!-- Create left column on search pages -->
+                                                  <div class="view view-ec-economics-az view-id-ec_economics_az view-display-id-page_1 view-dom-id-1">
+    
+  
+      <div class="attachment attachment-before">
+      <div class="item-list"><ol class="clear-block ec-glossary-pager"><li class="first">A</li>
+<li class="even"><a href="https://www.economist.com/economics-a-to-z/b">B</a></li>
+<li><a href="https://www.economist.com/economics-a-to-z/c">C</a></li>
+<li class="even"><a href="https://www.economist.com/economics-a-to-z/d">D</a></li>
+<li><a href="https://www.economist.com/economics-a-to-z/e">E</a></li>
+<li class="even"><a href="https://www.economist.com/economics-a-to-z/f">F</a></li>
+<li><a href="https://www.economist.com/economics-a-to-z/g">G</a></li>
+<li class="even"><a href="https://www.economist.com/economics-a-to-z/h">H</a></li>
+<li><a href="https://www.economist.com/economics-a-to-z/i">I</a></li>
+<li class="even"><a href="https://www.economist.com/economics-a-to-z/j">J</a></li>
+<li><a href="https://www.economist.com/economics-a-to-z/k">K</a></li>
+<li class="even"><a href="https://www.economist.com/economics-a-to-z/l">L</a></li>
+<li><a href="https://www.economist.com/economics-a-to-z/m">M</a></li>
+<li class="even"><a href="https://www.economist.com/economics-a-to-z/n">N</a></li>
+<li><a href="https://www.economist.com/economics-a-to-z/o">O</a></li>
+<li class="even"><a href="https://www.economist.com/economics-a-to-z/p">P</a></li>
+<li><a href="https://www.economist.com/economics-a-to-z/q">Q</a></li>
+<li class="even"><a href="https://www.economist.com/economics-a-to-z/r">R</a></li>
+<li><a href="https://www.economist.com/economics-a-to-z/s">S</a></li>
+<li class="even"><a href="https://www.economist.com/economics-a-to-z/t">T</a></li>
+<li><a href="https://www.economist.com/economics-a-to-z/u">U</a></li>
+<li class="even"><a href="https://www.economist.com/economics-a-to-z/v">V</a></li>
+<li><a href="https://www.economist.com/economics-a-to-z/w">W</a></li>
+<li class="even"><a href="https://www.economist.com/economics-a-to-z/x">X</a></li>
+<li><a href="https://www.economist.com/economics-a-to-z/y">Y</a></li>
+<li class="even last"><a href="https://www.economist.com/economics-a-to-z/z">Z</a></li>
+</ol></div><div class="ec-glossary-columns clearfix"><div class="grid-3 clearfix"><ul><li><a href="https://www.economist.com/economics-a-to-z#node-21529328" class="active">Absolute advantage</a></li><li><a href="https://www.economist.com/economics-a-to-z#node-21529926" class="active">Adaptive expectations</a></li><li><a href="https://www.economist.com/economics-a-to-z#node-21529329" class="active">Adverse selection</a></li><li><a href="https://www.economist.com/economics-a-to-z#node-21529326" class="active">Advertising</a></li><li><a href="https://www.economist.com/economics-a-to-z#node-21529323" class="active">Agency costs</a></li><li><a href="https://www.economist.com/economics-a-to-z#node-21529321" class="active">Agricultural policy</a></li><li><a href="https://www.economist.com/economics-a-to-z#node-21529320" class="active">Agriculture</a></li><li><a href="https://www.economist.com/economics-a-to-z#node-21529322" class="active">Aid</a></li></ul></div><div class="grid-3 clearfix"><ul><li><a href="https://www.economist.com/economics-a-to-z#node-21529324" class="active">Altruism</a></li><li><a href="https://www.economist.com/economics-a-to-z#node-21529325" class="active">Amortisation</a></li><li><a href="https://www.economist.com/economics-a-to-z#node-21529484" class="active">Animal spirits</a></li><li><a href="https://www.economist.com/economics-a-to-z#node-21529487" class="active">Antitrust</a></li><li><a href="https://www.economist.com/economics-a-to-z#node-21529462" class="active">Appreciation</a></li><li><a href="https://www.economist.com/economics-a-to-z#node-21529935" class="active">Arbitrage</a></li><li><a href="https://www.economist.com/economics-a-to-z#node-21529463" class="active">Arbitrage pricing theory</a></li><li><a href="https://www.economist.com/economics-a-to-z#node-21529936" class="active">Asian crisis</a></li></ul></div><div class="grid-3 clearfix"><ul><li><a href="https://www.economist.com/economics-a-to-z#node-21529464" class="active">Assets</a></li><li><a href="https://www.economist.com/economics-a-to-z#node-21529485" class="active">Asymmetric information</a></li><li><a href="https://www.economist.com/economics-a-to-z#node-21529469" class="active">Asymmetric shock</a></li><li><a href="https://www.economist.com/economics-a-to-z#node-21529490" class="active">Auctions</a></li><li><a href="https://www.economist.com/economics-a-to-z#node-21529492" class="active">Austrian economics</a></li><li><a href="https://www.economist.com/economics-a-to-z#node-21529493" class="active">Autarky</a></li><li><a href="https://www.economist.com/economics-a-to-z#node-21529494" class="active">Average</a></li></ul></div></div>    </div>
+  
+      <div class="view-content clearfix">
+      <div class="item-list">
+    <ol>
+          <li class="clearfix views-row views-row-1 views-row-odd views-row-first"><div id="node-21529328" class=" ec-glossary-type node node-type-economics_term node-published node-teaser clearfix">
+  <h2>Absolute advantage</h2>
+  
+  <div class="content clearfix">
+    <p>This is the simplest yardstick of economic performance. If one person, firm or country can produce more of something with the same amount of effort and resources, they have an absolute advantage over other producers. Being the best at something does not mean that doing that thing is the best way to use your scarce economic resources. The question of what to specialise in--and how to maximise the benefits from international trade--is best decided according to <a href="https://www.economist.com/economics-a-to-z/c#node-21529435" title="Read the definition of comparative advantage">comparative advantage</a>. Both absolute and comparative advantage may change significantly over time.</p>
+  </div>
+
+  </div>
+</li>
+          <li class="clearfix views-row views-row-2 views-row-even"><div id="node-21529926" class=" ec-glossary-type node node-type-economics_term node-published node-teaser clearfix">
+  <h2>Adaptive expectations</h2>
+  
+  <div class="content clearfix">
+    <p>A theory of how people form their views about the future that assumes they do so using past trends and the errors in their own earlier predictions. Contrast with <a href="https://www.economist.com/economics-a-to-z/r#node-21529875" title="Read the definition of rational expectations">rational expectations</a>.</p>
+  </div>
+
+  </div>
+</li>
+          <li class="clearfix views-row views-row-3 views-row-odd"><div id="node-21529329" class=" ec-glossary-type node node-type-economics_term node-published node-teaser clearfix">
+  <h2>Adverse selection</h2>
+  
+  <div class="content clearfix">
+    <p>When you do business with people you would be better off avoiding. This is one of two main sorts of <a href="https://www.economist.com/economics-a-to-z/m#node-21529422" title="Read the definition of market failure">market failure</a> often associated with insurance. The other is <a href="https://www.economist.com/economics-a-to-z/m#node-21529763" title="Read the definition of moral hazard">moral hazard</a>. Adverse selection can be a problem when there is <a href="https://www.economist.com/economics-a-to-z/a#node-21529485" title="Read the definition of asymmetric information">asymmetric information</a> between the seller of <a href="https://www.economist.com/economics-a-to-z/i#node-21529646" title="Read the definition of insurance">insurance</a> and the buyer; in particular, insurance will often not be profitable when buyers have better information about their risk of claiming than does the seller. Ideally, insurance premiums should be set according to the risk of a randomly selected person in the insured slice of the population (55-year-old male smokers, say). In practice, this means the <a href="https://www.economist.com/economics-a-to-z/a#node-21529494" title="Read the definition of average">average</a> <a href="https://www.economist.com/economics-a-to-z/r#node-21529781" title="Read the definition of risk">risk</a> of that group. When there is adverse selection, people who know they have a higher risk of claiming than the average of the group will buy the insurance, whereas those who have a below-average risk may decide it is too expensive to be worth buying. In this case, premiums set according to the average risk will not be sufficient to cover the claims that eventually arise, because among the people who have bought the policy more will have above-average risk than below-average risk. Putting up the premium will not solve this problem, for as the premium rises the insurance policy will become unattractive to more of the people who know they have a lower risk of claiming. One way to reduce adverse selection is to make the purchase of insurance compulsory, so that those for whom insurance priced for average risk is unattractive are not able to opt out.</p>
+  </div>
+
+  </div>
+</li>
+          <li class="clearfix views-row views-row-4 views-row-even"><div id="node-21529326" class=" ec-glossary-type node node-type-economics_term node-published node-teaser clearfix">
+  <h2>Advertising</h2>
+  
+  <div class="content clearfix">
+    <p>Many firms advertise their goods or services, but are they wasting economic resources? Some economists reckon that advertising merely manipulates consumer tastes and creates desires that would not otherwise exist. By increasing product differentiation and encouraging <a href="https://www.economist.com/economics-a-to-z/b#node-21529939" title="Read the definition of brand">brand</a> loyalty advertising may make consumers less price sensitive, moving the market further from <a href="https://www.economist.com/economics-a-to-z/p#node-21529574" title="Read the definition of perfect competition">perfect competition</a> towards imperfect competition (see <a href="https://www.economist.com/economics-a-to-z/m#node-21529760" title="Read the definition of monopolistic competition">monopolistic competition</a>) and increasing the ability of firms to charge more than marginal cost. Heavy spending on advertising may also create a barrier to entry, as a firm entering the market would have to spend a lot on advertising too. 	<P>However, some economists argue that advertising is economically valuable because it increases the flow of information in the economy and reduces the asymmetric information between the seller and the consumer. This intensifies competition, as consumers can be made aware quickly when there is a better deal on offer.</p>
+  </div>
+
+  </div>
+</li>
+          <li class="clearfix views-row views-row-5 views-row-odd"><div id="node-21529323" class=" ec-glossary-type node node-type-economics_term node-published node-teaser clearfix">
+  <h2>Agency costs</h2>
+  
+  <div class="content clearfix">
+    <p>These can arise when somebody (the principal) hires somebody else (the agent) to carry out a task and the interests of the agent conflict with the interests of the principal. An example of such principal-agent problems comes from the relationship between the shareholders who own a public company and the managers who run it. The owners would like managers to run the firm in ways that maximise the value of their shares, whereas the managers' priority may be, say, to build a business empire through rapid expansion and <a href="https://www.economist.com/economics-a-to-z/m#node-21529853" title="Read the definition of mergers and acquisitions">mergers and acquisitions</a>, which may not increase their firm's share price.  	<P>One way to reduce agency costs is for the principal to monitor what the agent does to make sure it is what he has been hired to do. But this can be costly, too. It may be impossible to define the agent's job in a way that can be monitored effectively. For instance, it is hard to know whether a manager who has expanded a firm through an acquisition that reduced its share price was pursuing his own empire-building interests or, say, was trying to maximise shareholder value but was unlucky.  	<P>Another way to lower agency costs, especially when monitoring is too expensive or too difficult, is to make the interests of the agent more like those of the principal. For instance, an increasingly common solution to the agency costs arising from the separation of ownership and management of public companies is to pay managers partly with shares and share options in the company. This gives the managers a powerful incentive to act in the interests of the owners by maximising shareholder value. But even this is not a perfect solution. Some managers with lots of share options have engaged in accounting fraud in order to increase the value of those options long enough for them to cash some of them in, but to the detriment of their firm and its other shareholders. See, for example, <a href="https://www.economist.com/economics-a-to-z/e#node-21529942" title="Read the definition of Enron">Enron</a>.</p>
+  </div>
+
+  </div>
+</li>
+          <li class="clearfix views-row views-row-6 views-row-even"><div id="node-21529321" class=" ec-glossary-type node node-type-economics_term node-published node-teaser clearfix">
+  <h2>Agricultural policy</h2>
+  
+  <div class="content clearfix">
+    <p>Countries often provide support for their farmers using trade barriers and <a href="https://www.economist.com/economics-a-to-z/s#node-21529341" title="Read the definition of subsidy">subsidy</a> because, for example: 	<P>*domestic agriculture, even if it is inefficient by world standards, can be an insurance policy in case it becomes difficult (as it does, for example, in wartime) to buy agricultural produce from abroad; 	<P>*farmers groups have proved adept at lobbying; 	<P>*politicians have sought to slow the depopulation of rural areas; 	<P>*agricultural prices can be volatile, as a result of unpredictable weather, among other things; and 	<P>*financial support can provide a safety net in unexpectedly severe market conditions. 	<P>Broadly speaking, governments have tried two methods of subsidising agriculture. The first, used in the United States during the 1930s and in the UK before it joined the European Union, is to top up farmers' incomes if they fall below a level deemed acceptable. Farmers may be required to set aside some of their land in return for this support. The second is to guarantee a minimum level of farm prices by buying up surplus supply and storing or destroying it if prices would otherwise fall below the guaranteed levels. This was the approach adopted by the EU when it set up its Common Agricultural Policy. To keep down the direct cost of this subsidy the EU used trade barriers, including import levies, to minimise competition to EU farmers from produce available more cheaply on world agriculture markets. Recent American farm-support policy has combined income top-ups and some guaranteed prices. 	<P>As most governments have become more committed to international trade, such agricultural policies have come under increasing attack, although the free trade rhetoric has often run far ahead of genuine reform. In 2003, rich countries together spent over $300 billion a year supporting their farmers, more than six times what they spent on foreign <a href="https://www.economist.com/economics-a-to-z/a#node-21529322" title="Read the definition of AID">AID</a>. Finding a way to end agricultural support had become by far the biggest remaining challenge for those trying to negotiate global <a href="https://www.economist.com/economics-a-to-z/f#node-21529897" title="Read the definition of free trade">free trade</a>.</p>
+  </div>
+
+  </div>
+</li>
+          <li class="clearfix views-row views-row-7 views-row-odd"><div id="node-21529320" class=" ec-glossary-type node node-type-economics_term node-published node-teaser clearfix">
+  <h2>Agriculture</h2>
+  
+  <div class="content clearfix">
+    <p>Farming around the world continues to become more productive while generally accounting for a smaller share of employment and <a href="https://www.economist.com/economics-a-to-z/n#node-21529733" title="Read the definition of national income">national income</a>, although in some poor countries it remains the sector on which the country and its people depend. Farming, forestry and fishing in 1913 accounted for 28% of employment in the United States, 41% in France and 60% in Japan, but only 12% in the UK. Now the proportion of the workforce employed in such activities has dropped below 6% in these and most other industrialised countries. 	<P>The total value of international trade in agriculture has risen steadily. But the global agriculture market remains severely distorted by trade barriers and government subsidy, such as the <a href="https://www.economist.com/economics-a-to-z/e#node-21529684" title="Read the definition of european union">european union</a>'s Common <a href="https://www.economist.com/economics-a-to-z/a#node-21529321" title="Read the definition of agricultural policy">agricultural policy</a>.</p>
+  </div>
+
+  </div>
+</li>
+          <li class="clearfix views-row views-row-8 views-row-even"><div id="node-21529322" class=" ec-glossary-type node node-type-economics_term node-published node-teaser clearfix">
+  <h2>Aid</h2>
+  
+  <div class="content clearfix">
+    <p>See <a href="https://www.economist.com/economics-a-to-z/i#node-21529620" title="Read the definition of international aid">international aid</a>.</p>
+  </div>
+
+  </div>
+</li>
+          <li class="clearfix views-row views-row-9 views-row-odd"><div id="node-21529324" class=" ec-glossary-type node node-type-economics_term node-published node-teaser clearfix">
+  <h2>Altruism</h2>
+  
+  <div class="content clearfix">
+    <p>It is often alleged that altruism is inconsistent with economic rationality, which assumes that people behave selfishly. Certainly, much economic analysis is concerned with how individuals behave, and <I>homo economicus</I> (<a href="https://www.economist.com/economics-a-to-z/e#node-21529556" title="Read the definition of economic man">economic man</a>) is usually assumed to act in his or her self-interest. However, self-interest does not necessarily mean selfish. Some economic models in the field of <a href="https://www.economist.com/economics-a-to-z/b#node-21529928" title="Read the definition of behavioural economics">behavioural economics</a> assume that self-interested individuals behave altruistically because they get some benefit, or <a href="https://www.economist.com/economics-a-to-z/u#node-21529393" title="Read the definition of utility">utility</a>, from doing so. For instance, it may make them feel better about themselves, or be a useful insurance policy against social unrest, say. Some economic models go further and relax the traditional assumption of fully rational behaviour by simply assuming that people sometimes behave altruistically, even if this may be against their self-interest. Either way, there is much economic literature about charity, <a href="https://www.economist.com/economics-a-to-z/i#node-21529620" title="Read the definition of international aid">international aid</a>, <a href="https://www.economist.com/economics-a-to-z/p#node-21529443" title="Read the definition of public spending">public spending</a> and redistributive taxation.</p>
+  </div>
+
+  </div>
+</li>
+          <li class="clearfix views-row views-row-10 views-row-even"><div id="node-21529325" class=" ec-glossary-type node node-type-economics_term node-published node-teaser clearfix">
+  <h2>Amortisation</h2>
+  
+  <div class="content clearfix">
+    <p>The running down or payment of a loan by instalments. An example is a repayment mortgage on a house, which is amortised by making monthly payments that over a pre-agreed period of time cover the value of the loan plus <a href="https://www.economist.com/economics-a-to-z/i#node-21529619" title="Read the definition of interest">interest</a>. With loans that are not amortised, the borrower pays only interest during the period of the loan and then repays the sum borrowed in full.</p>
+  </div>
+
+  </div>
+</li>
+          <li class="clearfix views-row views-row-11 views-row-odd"><div id="node-21529484" class=" ec-glossary-type node node-type-economics_term node-published node-teaser clearfix">
+  <h2>Animal spirits</h2>
+  
+  <div class="content clearfix">
+    <p>The colourful name that <a href="https://www.economist.com/economics-a-to-z/k#node-21529579" title="Read the definition of keynes">keynes</a> gave to one of the essential ingredients of economic prosperity: confidence. According to Keynes, animal spirits are a particular sort of confidence, "naive optimism". He meant this in the sense that, for entrepreneurs in particular, "the thought of ultimate loss which often overtakes pioneers, as experience undoubtedly tells us and them, is put aside as a healthy man puts aside the expectation of death". Where these animal spirits come from is something of a mystery. Certainly, attempts by politicians and others to talk up confidence by making optimistic noises about economic prospects have rarely done much good.</p>
+  </div>
+
+  </div>
+</li>
+          <li class="clearfix views-row views-row-12 views-row-even"><div id="node-21529487" class=" ec-glossary-type node node-type-economics_term node-published node-teaser clearfix">
+  <h2>Antitrust</h2>
+  
+  <div class="content clearfix">
+    <p><a href="https://www.economist.com/economics-a-to-z/g#node-21529918" title="Read the definition of government">government</a> policy for dealing with <a href="https://www.economist.com/economics-a-to-z/m#node-21529731" title="Read the definition of monopoly">monopoly</a>. Antitrust laws aim to stop abuses of market power by big companies and, sometimes, to prevent corporate <a href="https://www.economist.com/economics-a-to-z/m#node-21529853" title="Read the definition of mergers and acquisitions">mergers and acquisitions</a> that would create or strengthen a monopolist. There have been big differences in antitrust policies both among countries and within the same country over time. This has reflected different ideas about what constitutes a monopoly and, where there is one, what sorts of behaviour are abusive. 	<P>In the United States, monopoly policy has been built on the Sherman Antitrust Act of 1890. This prohibited contracts or conspiracies to restrain trade or, in the words of a later act, to monopolise commerce. In the early 20th century this law was used to reduce the economic power wielded by so-called "robber barons", such as JP Morgan and John D. Rockefeller, who dominated much of American industry through huge trusts that controlled companies' voting shares. Du Pont chemicals, the railroad companies and Rockefeller's Standard Oil, among others, were broken up. In the 1970s the Sherman Act was turned (ultimately without success) against IBM, and in 1982 it secured the break-up of AT&amp;T's nationwide telecoms monopoly. 	<P>In the 1980s a more <a href="https://www.economist.com/economics-a-to-z/l#node-21529551" title="Read the definition of laissez-faire">laissez-faire</a> approach was adopted, underpinned by economic theories from the <a href="https://www.economist.com/economics-a-to-z/c#node-21529467" title="Read the definition of chicago school">chicago school</a>. These theories said that the only justification for antitrust intervention should be that a lack of competition harmed consumers, and not that a firm had become, in some ill-defined sense, too big. Some monopolistic activities previously targeted by antitrust authorities, such as predatory pricing and exclusive marketing agreements, were much less harmful to consumers than had been thought in the past. They also criticised the traditional method of identifying a monopoly, which was based on looking at what percentage of a market was served by the biggest firm or firms, using a measure known as the <a href="https://www.economist.com/economics-a-to-z/h#node-21529791" title="Read the definition of herfindahl-hirschman index">herfindahl-hirschman index</a>. Instead, they argued that even a market dominated by one firm need not be a matter of antitrust concern, provided it was a contestable market.  	<P>In the 1990s American antitrust policy became somewhat more interventionist. A high-profile lawsuit was launched against Microsoft in 1998. The giant software company was found guilty of anti-competitive behaviour, which was said to slow the pace of innovation. However, fears that the firm would be broken up, signalling a far more interventionalist American antitrust policy, proved misplaced. The firm was not severely punished. 	<P>In the UK, antitrust policy was long judged according to what policymakers decided was in the public interest. At times this approach was comparatively permissive of mergers and acquisitions; at others it was less so. However, in the mid-1980s the UK followed the American lead in basing antitrust policy on whether changes in competition harmed consumers. Within the rest of the <a href="https://www.economist.com/economics-a-to-z/e#node-21529684" title="Read the definition of european union">european union</a> several big countries pursued policies of building up national champions, allowing chosen firms to enjoy some monopoly power at home which could be used to make them more effective competitors abroad. However, during the 1990s the European Commission became increasingly active in antitrust policy, mostly seeking to promote competition within the EU.  	<P>In 2000, the EU controversially blocked a merger between two American firms, GE and Honeywell; the deal had already been approved by America's antitrust regulators. The controversy highlighted an important issue. As <a href="https://www.economist.com/economics-a-to-z/g#node-21529929" title="Read the definition of globalisation">globalisation</a> increases, the relevant market for judging whether market power exists or is being abused will increasingly cover far more territory than any one single economy. Indeed, there may be a need to establish a global antitrust watchdog, perhaps under the auspices of the <a href="https://www.economist.com/economics-a-to-z/w#node-21529333" title="Read the definition of world trade organisation">world trade organisation</a>.</p>
+  </div>
+
+  </div>
+</li>
+          <li class="clearfix views-row views-row-13 views-row-odd"><div id="node-21529462" class=" ec-glossary-type node node-type-economics_term node-published node-teaser clearfix">
+  <h2>Appreciation</h2>
+  
+  <div class="content clearfix">
+    <p>A rise in the value of an <a href="https://www.economist.com/economics-a-to-z/a#node-21529464" title="Read the definition of asset">asset</a> and the opposite of <a href="https://www.economist.com/economics-a-to-z/d#node-21529696" title="Read the definition of depreciation">depreciation</a>. When the value of a currency rises relative to another, it appreciates.</p>
+  </div>
+
+  </div>
+</li>
+          <li class="clearfix views-row views-row-14 views-row-even"><div id="node-21529935" class=" ec-glossary-type node node-type-economics_term node-published node-teaser clearfix">
+  <h2>Arbitrage</h2>
+  
+  <div class="content clearfix">
+    <p>Buying an <a href="https://www.economist.com/economics-a-to-z/a#node-21529464" title="Read the definition of asset">asset</a> in one market and simultaneously selling an identical asset in another market at a higher price. Sometimes these will be identical assets in different markets, for instance, shares in a company listed on both the London Stock Exchange and New York Stock Exchange. Often the assets being arbitraged will be identical in a more complicated way, for example, they will be different sorts of financial <a href="https://www.economist.com/economics-a-to-z/s#node-21529666" title="Read the definition of securities">securities</a> that are each exposed to identical <a href="https://www.economist.com/economics-a-to-z/r#node-21529781" title="Read the definition of risks">risks</a>. 	<P>Some kinds of arbitrage are completely risk-free-this is pure arbitrage. For instance, if <a href="https://www.economist.com/economics-a-to-z/e#node-21529713" title="Read the definition of EUROS">EUROS</a> are available more cheaply in dollars in London than in New York, arbitrageurs (also known as arbs) can make a risk-free <a href="https://www.economist.com/economics-a-to-z/p#node-21529475" title="Read the definition of PROFIT">PROFIT</a> by buying euros in London and selling an identical amount of them in New York. Opportunities for pure arbitrage have become rare in recent years, partly because of the <a href="https://www.economist.com/economics-a-to-z/g#node-21529929" title="Read the definition of GLOBALISATION">GLOBALISATION</a> of <a href="https://www.economist.com/economics-a-to-z/f#node-21529567" title="Read the definition of FINANCIAL MARKETS">FINANCIAL MARKETS</a>. Today, a lot of so called arbitrage, much of it done by <a href="https://www.economist.com/economics-a-to-z/h#node-21529768" title="Read the definition of hedge funds">hedge funds</a>, involves assets that have some similarities but are not identical. This is not pure arbitrage and can be far from risk free.</p>
+  </div>
+
+  </div>
+</li>
+          <li class="clearfix views-row views-row-15 views-row-odd"><div id="node-21529463" class=" ec-glossary-type node node-type-economics_term node-published node-teaser clearfix">
+  <h2>Arbitrage pricing theory</h2>
+  
+  <div class="content clearfix">
+    <p>This is one of two influential economic theories of how assets are priced in the financial markets. The other is the <a href="https://www.economist.com/economics-a-to-z/c#node-21529866" title="Read the definition of capital asset pricing model">capital asset pricing model</a>. The <a href="https://www.economist.com/economics-a-to-z/a#node-21529935" title="Read the definition of arbitrage">arbitrage</a> pricing theory says that the price of a financial <a href="https://www.economist.com/economics-a-to-z/a#node-21529464" title="Read the definition of asset">asset</a> reflects a few key risk factors, such as the expected <a href="https://www.economist.com/economics-a-to-z/i#node-21529619" title="Read the definition of rate of interest">rate of interest</a>, and how the price of the asset changes relative to the price of a portfolio of assets. If the price of an asset happens to diverge from what the theory says it should be, arbitrage by investors should bring it back into line.</p>
+  </div>
+
+  </div>
+</li>
+          <li class="clearfix views-row views-row-16 views-row-even"><div id="node-21529936" class=" ec-glossary-type node node-type-economics_term node-published node-teaser clearfix">
+  <h2>Asian crisis</h2>
+  
+  <div class="content clearfix">
+    <p>During 1997-98, many of the East Asian <a href="https://www.economist.com/economics-a-to-z/t#node-21529370" title="Read the definition of tiger economies">tiger economies</a> suffered a severe finanical and economic crisis. This had big consequences for the global <a href="https://www.economist.com/economics-a-to-z/f#node-21529567" title="Read the definition of financial markets">financial markets</a>, which had become increasingly exposed to the promise that Asia had seemed to offer. The crisis destroyed wealth on a massive scale and sent absolute poverty shooting up. In the banking system alone, corporate loans equivalent to around half of one year's GDP went bad - a destruction of savings on a scale more usually associated with a full-scale war. The precise cause of the crisis remains a matter of debate. Fingers have been pointed at the <a href="https://www.economist.com/economics-a-to-z/c#node-21529717" title="Read the definition of currency peg">currency peg</a> adopted by some countries, and a reduction of <a href="https://www.economist.com/economics-a-to-z/c#node-21529837" title="Read the definition of capital controls">capital controls</a> in the years before the crisis. Some blamed economic <a href="https://www.economist.com/economics-a-to-z/c#node-21529836" title="Read the definition of contagion">contagion</a>. The crisis brought an end to a then widespread belief that there was a distinct "Asian way" of <a href="https://www.economist.com/economics-a-to-z/c#node-21529534" title="Read the definition of capitalism">capitalism</a> that might prove just as successful as capitalism in America or Europe. Instead, critics turned their fire on Asian cronyism, ill-disciplined banking and lack of <a href="https://www.economist.com/economics-a-to-z/t#node-21529386" title="Read the definition of transparency">transparency</a>. In the years following the crisis, most of the countries involved have introduced reforms designed to increase transparency and improve the health of the banking system, although some (such as South Korea) went much further than others (such as Indonesia).</p>
+  </div>
+
+  </div>
+</li>
+          <li class="clearfix views-row views-row-17 views-row-odd"><div id="node-21529464" class=" ec-glossary-type node node-type-economics_term node-published node-teaser clearfix">
+  <h2>Assets</h2>
+  
+  <div class="content clearfix">
+    <p>Things that have earning power or some other value to their owner.</p>
+  </div>
+
+  </div>
+</li>
+          <li class="clearfix views-row views-row-18 views-row-even"><div id="node-21529485" class=" ec-glossary-type node node-type-economics_term node-published node-teaser clearfix">
+  <h2>Asymmetric information</h2>
+  
+  <div class="content clearfix">
+    <p>When somebody knows more than somebody else. Such asymmetric information can make it difficult for the two people to do business together, which is why economists, especially those practising <a href="https://www.economist.com/economics-a-to-z/g#node-21529904" title="Read the definition of game theory">game theory</a>, are interested in it. Transactions involving asymmetric (or private) information are everywhere. A government selling broadcasting licences does not know what buyers are prepared to pay for them; a lender does not know how likely a borrower is to repay; a used-car seller knows more about the quality of the car being sold than do potential buyers. This kind of asymmetry can distort people's incentives and result in significant inefficiencies.</p>
+  </div>
+
+  </div>
+</li>
+          <li class="clearfix views-row views-row-19 views-row-odd"><div id="node-21529469" class=" ec-glossary-type node node-type-economics_term node-published node-teaser clearfix">
+  <h2>Asymmetric shock</h2>
+  
+  <div class="content clearfix">
+    <p>When something unexpected happens that affects one economy (or part of an economy) more than the rest. This can create big problems for policymakers if they are trying to set a <a href="https://www.economist.com/economics-a-to-z/m#node-21529450" title="Read the definition of macroeconomic policy">macroeconomic policy</a> that works for both the area affected by the <a href="https://www.economist.com/economics-a-to-z/s#node-21529661" title="Read the definition of shock">shock</a> and the unaffected area. For instance, some economic areas may be oil exporters and thus highly dependent on the <a href="https://www.economist.com/economics-a-to-z/p#node-21529499" title="Read the definition of price">price</a> of oil, but other areas are not. If the oil price plunges, the oil-dependent area would benefit from policies designed to boost demand that might be unsuited to the needs of the rest of the economy. This may be a constant problem for those responsible for setting the <a href="https://www.economist.com/economics-a-to-z/i#node-21529619" title="Read the definition of interest rate">interest rate</a> for the <a href="https://www.economist.com/economics-a-to-z/e#node-21529713" title="Read the definition of euro">euro</a> given the big differences--and different potential exposures to shocks--among the economies within the <a href="https://www.economist.com/economics-a-to-z/e#node-21529943" title="Read the definition of euro zone">euro zone</a>.</p>
+  </div>
+
+  </div>
+</li>
+          <li class="clearfix views-row views-row-20 views-row-even"><div id="node-21529490" class=" ec-glossary-type node node-type-economics_term node-published node-teaser clearfix">
+  <h2>Auctions</h2>
+  
+  <div class="content clearfix">
+    <p>Going, going, gone. Holding an auction can be an extremely efficient way for a seller to set the price of its products, especially if it does not have much <a href="https://www.economist.com/economics-a-to-z/i#node-21529564" title="Read the definition of information">information</a> about how much people may be willing to pay for them. Auctions fascinate economists, especially those who specialise in <a href="https://www.economist.com/economics-a-to-z/g#node-21529904" title="Read the definition of game theory">game theory</a>. They have long been a feature of the sale of art and antiques in the rooms of firms such as Sotheby's and Christie's. But in recent years they have played a growing role in other parts of the economy, ranging from the allocation of <a href="https://www.economist.com/economics-a-to-z/g#node-21529918" title="Read the definition of government">government</a>-controlled broadcasting bandwidth to the awarding of work to subcontractors by governments and big firms using competitive tendering, and even more recently the sale of goods over the Internet. 	<P>An English auction is the most familiar. Bidders compete to offer higher prices and drop out until only one remains. In a Dutch auction, the auctioneer calls out a high price then keeps lowering it until there is a buyer. There are various forms of sealed bid auctions. In a first price sealed bid, each buyer submits a price in a sealed envelope and all bids are opened simultaneously, with the highest offer winning. In a second (or third, fourth, and so on) price sealed bid, the highest bidder wins but pays only the second (third, fourth) highest price bid.  	<P>An English or Dutch auction will work well for a seller if there is more than one serious bidder, as <a href="https://www.economist.com/economics-a-to-z/c#node-21529807" title="Read the definition of competition">competition</a> will ensure that the price is set at the level at which it is not worth more to any other bidder but the winner. Indeed, in a competitive auction the successful bidder may end up offering more than what is being auctioned is actually worth. This is known as the winner's curse.  	<P>Which method will generate the best price for the seller depends on how many bidders take part and how well informed they are. Unfortunately for the seller, this information is not always available before the auction takes place.</p>
+  </div>
+
+  </div>
+</li>
+          <li class="clearfix views-row views-row-21 views-row-odd"><div id="node-21529492" class=" ec-glossary-type node node-type-economics_term node-published node-teaser clearfix">
+  <h2>Austrian economics</h2>
+  
+  <div class="content clearfix">
+    <p>A brand of neo-classical economics established in Vienna during the late 19th century and the first half of the 20th century. It was strongly opposed to Marxism and, more broadly, to the use of economic theories to justify <a href="https://www.economist.com/economics-a-to-z/g#node-21529918" title="Read the definition of government">government</a> intervention in the economy. Prominent members included <a href="https://www.economist.com/economics-a-to-z/h#node-21529738" title="Read the definition of Friedrich hayek">Friedrich hayek</a>, <a href="https://www.economist.com/economics-a-to-z/s#node-21529721" title="Read the definition of Joseph schumpeter">Joseph schumpeter</a> and Ludwig von Mises. It gave birth to the definition of economics as the science of studying human behaviour as a relationship between ends and scarce means that have alternative uses. Austrian economic thinking was characterised by attributing all economic activity, including the behaviour of apparently impersonal institutions, to the wishes and actions of individuals. It did this by examining choices in terms of their <a href="https://www.economist.com/economics-a-to-z/o#node-21529616" title="Read the definition of opportunity cost">opportunity cost</a> (that is, what is the next best use of resources to that which is being considered?) and by analysing the impact of timing on decision making. 	<P>Hayek correctly predicted the failure of Soviet-style central planning. His ideas are said to have inspired many of the free-market reforms carried out during the 1980s in the United States under Ronald Reagan and in the UK under Margaret Thatcher. Schumpeter developed a theory of innovation and economic change characterised by the phrase creative destruction.</p>
+  </div>
+
+  </div>
+</li>
+          <li class="clearfix views-row views-row-22 views-row-even"><div id="node-21529493" class=" ec-glossary-type node node-type-economics_term node-published node-teaser clearfix">
+  <h2>Autarky</h2>
+  
+  <div class="content clearfix">
+    <p>The idea that a country should be self-sufficient and not take part in international trade. The experience of countries that have pursued this Utopian ideal by substituting domestic production for imports is an unhappy one. No country has been able to produce the full range of goods demanded by its population at competitive prices. Indeed, those that have tried to do so have condemned themselves to inefficiency and comparative poverty, compared with countries that engage in international trade.</p>
+  </div>
+
+  </div>
+</li>
+          <li class="clearfix views-row views-row-23 views-row-odd views-row-last"><div id="node-21529494" class=" ec-glossary-type node node-type-economics_term node-published node-teaser clearfix">
+  <h2>Average</h2>
+  
+  <div class="content clearfix">
+    <p>A number that is calculated to summarise a group of numbers. The most commonly used average is the mean, the sum of the numbers divided by however many numbers there are in the group. The median is the middle value in a group of numbers ranked in order of size. The mode is the number that occurs most often in a group of numbers. Take the following group of numbers: 1, 2, 2, 9, 12, 13, 17 <P>The mean is 56/7=8, <P>The median is 9, <P>The mode is 2</p>
+  </div>
+
+  </div>
+</li>
+      </ol>
+</div>
+    </div>
+  
+  
+      <div class="attachment attachment-after">
+      <a class="top-link" href="economics-a-to-z.htm#top">Back to top</a>    </div>
+  
+  
+  
+  
+</div>               </div> <!-- /#main-area -->
+
+              <div id="column-right" class="grid-6 clearfix">
+          <div id="homepage-touts">
+  <div class="grid-3 grid-first">
+    <div class="tout tout-1">
+          </div>
+
+    <div class="tout tout-2">
+          </div>
+  </div> <!-- /#homepage-touts -->
+
+  <div class="grid-3">
+    <div class="tout tout-issue">
+      <div class="cover-image-container">
+              </div>
+    </div>
+  </div> <!-- /#homepage-issue -->
+</div>
+          <div id="block-ec_ads-mpu_no_wrapper_top_ad" class="block block-ec_ads 
+ec-ads-gpt">
+    <div class="content clearfix">
+    <div class="ec-ads ec-ads-remove-if-empty ec-ads-remove-wrapper"><!-- Site: Commerce.  Zone: Economics A-Z |  --> <div id="gpt_mpu_no_wrapper_top_ad" ><script type="text/javascript">  googletag.cmd.push(function() {      googletag.display("gpt_mpu_no_wrapper_top_ad");  });
+</script><noscript>
+  <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5605/teg.lasn/ajde&amp;t=subs%3Dn%26sdn%3Dn%26pos%3Dmpu_no_wrapper_top&amp;sz=20x20&amp;tile=6&amp;c=679733243" target="_blank">
+   <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5605/teg.lasn/ajde&amp;t=subs%3Dn%26sdn%3Dn%26pos%3Dmpu_no_wrapper_top&amp;sz=20x20&amp;tile=6&amp;c=679733243" />
+  </a>
+</noscript></div></div>  </div>
+</div>
+
+<div id="block-ec_glossary-economics_az_book" class="block block-ec_glossary 
+">
+      <div class="title">
+              <h3>Essential Economics</h3>
+          </div>
+    <div class="content clearfix">
+    
+<img src="https://www.economist.com/sites/all/modules/ec_glossary/images/essential-econ.gif" alt="Essential Economics book cover" title="" width="60" height="100" />
+<p>Economics A-Z is adapted from "Essential Economics", by <a href="http://www.economist.com/mediadirectory/matthew-bishop">Matthew Bishop</a> - Bloomberg Press; Economist Books.</p>
+
+<p class="last">Buy it at <a href="http://www.amazon.com/exec/obidos/tg/detail/-/1861975805/theeconomist">Amazon.com</a> or <a href="http://www.amazon.co.uk/exec/obidos/ASIN/1861975805/theeconomist02">Amazon.co.uk</a></p>
+  </div>
+</div>
+
+<div id="block-ec_ads-top_mpu_ad" class="block block-ec_ads 
+ec-ads-gpt">
+    <div class="content clearfix">
+    <div class="ec-ads ec-ads-remove-if-empty"><p class="ec-ads-label">Advertisement</p><!-- Site: Commerce.  Zone: Economics A-Z |  --> <div id="gpt_top_mpu_ad" ><script type="text/javascript">  googletag.cmd.push(function() {      googletag.display("gpt_top_mpu_ad");  });
+</script><noscript>
+  <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5605/teg.lasn/ajde&amp;t=subs%3Dn%26sdn%3Dn%26pos%3Dmpu_top&amp;sz=300x250%7C350x900%7C350x600%7C300x600&amp;tile=7&amp;c=679733243" target="_blank">
+   <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5605/teg.lasn/ajde&amp;t=subs%3Dn%26sdn%3Dn%26pos%3Dmpu_top&amp;sz=300x250%7C350x900%7C350x600%7C300x600&amp;tile=7&amp;c=679733243" />
+  </a>
+</noscript></div></div>  </div>
+</div>
+
+<div id="block-ec_ads-ribbon_ad" class="block block-ec_ads 
+ec-ads-gpt">
+    <div class="content clearfix">
+    <div class="ec_topic_ribbon ec-ads-remove-if-empty"><!-- Site: Commerce.  Zone: Economics A-Z |  --> <div id="gpt_ribbon_ad" ><script type="text/javascript">  googletag.cmd.push(function() {      googletag.display("gpt_ribbon_ad");  });
+</script><noscript>
+  <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5605/teg.lasn/ajde&amp;t=subs%3Dn%26sdn%3Dn%26pos%3Dabsribbon&amp;sz=351x49&amp;tile=8&amp;c=679733243" target="_blank">
+   <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5605/teg.lasn/ajde&amp;t=subs%3Dn%26sdn%3Dn%26pos%3Dabsribbon&amp;sz=351x49&amp;tile=8&amp;c=679733243" />
+  </a>
+</noscript></div></div>  </div>
+</div>
+
+<div id="block-ec_social-right_rail_social_share_buttons" class="block block-ec_social 
+">
+    <div class="content clearfix">
+    <div id="social-share-buttons-block">
+  <div class="title">Follow <cite>The Economist</cite></div>
+  <div class="social-share-buttons">
+    <ul class="clearfix">
+      <li class="facebook">
+        <a data-ec-omniture="rightrail|social_share|facebook" href="http://www.facebook.com/TheEconomist" title="Facebook" target="_blank">Facebook</a>
+      </li>
+      <li class="twitter">
+        <a data-ec-omniture="rightrail|social_share|twitter" href="http://twitter.com/TheEconomist" title="Twitter" target="_blank">Twitter</a>
+      </li>
+      <li class="linked-in">
+        <a data-ec-omniture="rightrail|social_share|linked-in" href="http://www.linkedin.com/groups/Economist-official-group-Economist-newspaper-3056216" title="Linked in" target="_blank">Linked in</a>
+      </li>
+      <li class="google-plus">
+        <a data-ec-omniture="rightrail|social_share|plusone" href="https://plus.google.com/100470681032489535736/posts" title="Google plus" target="_blank">Google plus</a>
+      </li>
+      <li class="tumblr">
+        <a data-ec-omniture="rightrail|social_share|tumblr" href="http://theeconomist.tumblr.com/" title="Tumblr" target="_blank">Tumblr</a>
+      </li>
+      <li class="instagram">
+        <a data-ec-omniture="rightrail|social_share|instagram" href="http://instagram.com/theeconomist/" title="Instagram" target="_blank">Instagram</a>
+      </li>
+      <li class="youtube">
+        <a data-ec-omniture="rightrail|social_share|youtube" href="http://www.youtube.com/user/economistmagazine" title="YouTube" target="_blank">YouTube</a>
+      </li>
+      <li class="rss">
+        <a data-ec-omniture="rightrail|social_share|rss" href="https://www.economist.com/rss" title="RSS" target="_blank">RSS</a>
+      </li>
+      <li class="newsletters">
+        <a data-ec-omniture="rightrail|social_share|newsletters" href="https://www.economist.com/newsletters" title="Newsletters" target="_blank">Newsletters</a>
+      </li>
+    </ul>
+  </div>
+</div>  </div>
+</div>
+
+<div id="block-ec_mostx-mostpopular" class="block block-ec_mostx 
+">
+    <div class="content clearfix">
+    <div id="most-lists" class="block">
+  <div id="block-title"><p>Most commented</p></div>
+  <div class="list-wrapper">
+    
+  </div>
+</div>
+  </div>
+</div>
+
+<div id="block-ec_ads-bottom_mpu_ad" class="block block-ec_ads 
+ec-ads-gpt">
+    <div class="content clearfix">
+    <div class="ec-ads ec-ads-remove-if-empty"><p class="ec-ads-label">Advertisement</p><!-- Site: Commerce.  Zone: Economics A-Z |  --> <div id="gpt_bottom_mpu_ad" ><script type="text/javascript">  googletag.cmd.push(function() {      googletag.display("gpt_bottom_mpu_ad");  });
+</script><noscript>
+  <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5605/teg.lasn/ajde&amp;t=subs%3Dn%26sdn%3Dn%26pos%3Dmpu_bottom&amp;sz=300x250%7C50x50%7C300x600&amp;tile=9&amp;c=679733243" target="_blank">
+   <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5605/teg.lasn/ajde&amp;t=subs%3Dn%26sdn%3Dn%26pos%3Dmpu_bottom&amp;sz=300x250%7C50x50%7C300x600&amp;tile=9&amp;c=679733243" />
+  </a>
+</noscript></div></div>  </div>
+</div>
+
+<div id="block-ec_pixel_tracking_onscroll-bottom_onscroll" class="block block-ec_pixel_tracking_onscroll 
+">
+    <div class="content clearfix">
+    <div id="onscroll-ad-holder-mpu2"></div>  </div>
+</div>
+
+<div id="block-block-1" class="block block-block 
+">
+    <div class="content clearfix">
+    <div id="product-events">
+<div class="title">Products</div>
+<div class="product-section product-section-last linked">
+<p class="products-events-section"><strong><a  class="social-link" href="https://shop.economist.com/" target="_blank">Want more from <i>The Economist?</i></a></strong><br />
+Visit The Economist e-store and you’ll find a range of carefully selected products for business and pleasure, Economist books and diaries, and much more</p>
+</div>
+</div>
+  </div>
+</div>
+
+<div id="block-ec_ads-bottom_right_mpu_ad" class="block block-ec_ads 
+ec-ads-gpt">
+    <div class="content clearfix">
+    <div class="ec-ads ec-ads-remove-if-empty"><p class="ec-ads-label">Advertisement</p><!-- Site: Commerce.  Zone: Economics A-Z |  --> <div id="gpt_bottom_right_mpu_ad" ><script type="text/javascript">  googletag.cmd.push(function() {      googletag.display("gpt_bottom_right_mpu_ad");  });
+</script><noscript>
+  <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5605/teg.lasn/ajde&amp;t=subs%3Dn%26sdn%3Dn%26pos%3Dmpu_bottom_right&amp;sz=300x250%7C45x45&amp;tile=10&amp;c=679733243" target="_blank">
+   <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5605/teg.lasn/ajde&amp;t=subs%3Dn%26sdn%3Dn%26pos%3Dmpu_bottom_right&amp;sz=300x250%7C45x45&amp;tile=10&amp;c=679733243" />
+  </a>
+</noscript></div></div>  </div>
+</div>
+
+<div id="block-ec_pixel_tracking_onscroll-bottom_right_onscroll" class="block block-ec_pixel_tracking_onscroll 
+">
+    <div class="content clearfix">
+    <div id="onscroll-ad-holder"></div>  </div>
+</div>
+
+        </div> <!-- /#side-bar -->
+      
+      
+    </div> <!-- /#columns -->
+          <div id="footer-classifieds" class="clearfix">
+        <div class="title">Classified ads</div>
+        <div id="block-ec_ads-button_ad_1" class="block block-ec_ads 
+ec-ads-gpt ec-classified-box ec-ads-classified first">
+    <div class="content clearfix">
+    <!-- Site: Commerce.  Zone: Economics A-Z |  --> <div id="gpt_button_ad_1" ><script type="text/javascript">  googletag.cmd.push(function() {      googletag.display("gpt_button_ad_1");  });
+</script><noscript>
+  <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5605/teg.lasn/ajde&amp;t=subs%3Dn%26sdn%3Dn%26pos%3Dbutton1&amp;sz=125x125&amp;c=679733243" target="_blank">
+   <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5605/teg.lasn/ajde&amp;t=subs%3Dn%26sdn%3Dn%26pos%3Dbutton1&amp;sz=125x125&amp;c=679733243" />
+  </a>
+</noscript></div>  </div>
+</div>
+
+<div id="block-ec_ads-button_ad_2" class="block block-ec_ads 
+ec-ads-gpt ec-classified-box ec-ads-classified">
+    <div class="content clearfix">
+    <!-- Site: Commerce.  Zone: Economics A-Z |  --> <div id="gpt_button_ad_2" ><script type="text/javascript">  googletag.cmd.push(function() {      googletag.display("gpt_button_ad_2");  });
+</script><noscript>
+  <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5605/teg.lasn/ajde&amp;t=subs%3Dn%26sdn%3Dn%26pos%3Dbutton2&amp;sz=125x125&amp;c=679733243" target="_blank">
+   <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5605/teg.lasn/ajde&amp;t=subs%3Dn%26sdn%3Dn%26pos%3Dbutton2&amp;sz=125x125&amp;c=679733243" />
+  </a>
+</noscript></div>  </div>
+</div>
+
+<div id="block-ec_ads-button_ad_3" class="block block-ec_ads 
+ec-ads-gpt ec-classified-box ec-ads-classified">
+    <div class="content clearfix">
+    <!-- Site: Commerce.  Zone: Economics A-Z |  --> <div id="gpt_button_ad_3" ><script type="text/javascript">  googletag.cmd.push(function() {      googletag.display("gpt_button_ad_3");  });
+</script><noscript>
+  <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5605/teg.lasn/ajde&amp;t=subs%3Dn%26sdn%3Dn%26pos%3Dbutton3&amp;sz=125x125&amp;c=679733243" target="_blank">
+   <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5605/teg.lasn/ajde&amp;t=subs%3Dn%26sdn%3Dn%26pos%3Dbutton3&amp;sz=125x125&amp;c=679733243" />
+  </a>
+</noscript></div>  </div>
+</div>
+
+<div id="block-ec_ads-button_ad_4" class="block block-ec_ads 
+ec-ads-gpt ec-classified-box ec-ads-classified">
+    <div class="content clearfix">
+    <!-- Site: Commerce.  Zone: Economics A-Z |  --> <div id="gpt_button_ad_4" ><script type="text/javascript">  googletag.cmd.push(function() {      googletag.display("gpt_button_ad_4");  });
+</script><noscript>
+  <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5605/teg.lasn/ajde&amp;t=subs%3Dn%26sdn%3Dn%26pos%3Dbutton4&amp;sz=125x125&amp;c=679733243" target="_blank">
+   <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5605/teg.lasn/ajde&amp;t=subs%3Dn%26sdn%3Dn%26pos%3Dbutton4&amp;sz=125x125&amp;c=679733243" />
+  </a>
+</noscript></div>  </div>
+</div>
+
+<div id="block-ec_ads-button_ad_5" class="block block-ec_ads 
+ec-ads-gpt ec-classified-box ec-ads-classified">
+    <div class="content clearfix">
+    <!-- Site: Commerce.  Zone: Economics A-Z |  --> <div id="gpt_button_ad_5" ><script type="text/javascript">  googletag.cmd.push(function() {      googletag.display("gpt_button_ad_5");  });
+</script><noscript>
+  <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5605/teg.lasn/ajde&amp;t=subs%3Dn%26sdn%3Dn%26pos%3Dbutton5&amp;sz=125x125&amp;c=679733243" target="_blank">
+   <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5605/teg.lasn/ajde&amp;t=subs%3Dn%26sdn%3Dn%26pos%3Dbutton5&amp;sz=125x125&amp;c=679733243" />
+  </a>
+</noscript></div>  </div>
+</div>
+
+<div id="block-ec_ads-button_ad_6" class="block block-ec_ads 
+ec-ads-gpt ec-classified-box ec-ads-classified last">
+    <div class="content clearfix">
+    <!-- Site: Commerce.  Zone: Economics A-Z |  --> <div id="gpt_button_ad_6" ><script type="text/javascript">  googletag.cmd.push(function() {      googletag.display("gpt_button_ad_6");  });
+</script><noscript>
+  <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5605/teg.lasn/ajde&amp;t=subs%3Dn%26sdn%3Dn%26pos%3Dbutton6&amp;sz=125x125&amp;c=679733243" target="_blank">
+   <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5605/teg.lasn/ajde&amp;t=subs%3Dn%26sdn%3Dn%26pos%3Dbutton6&amp;sz=125x125&amp;c=679733243" />
+  </a>
+</noscript></div>  </div>
+</div>
+
+      </div>
+        <aside class="site-index">
+      <div>
+  <div class="svg-logo"><img class="mh-logo" width="170" height="85" src="https://cdn.static-economist.com/sites/all/themes/econfinal/images/svg/logo.svg" alt="The Economist" /></div>
+      <ul class="site-index-1">
+              <li><a href="https://www.economist.com/contact-info" data-ec-omniture="mini_map|contact_us">Contact us</a></li>
+              <li><a href="https://www.economist.com/help/home" data-ec-omniture="mini_map|help">Help</a></li>
+              <li><a href="http://my.economist.com" data-ec-omniture="mini_map|my_account">My account</a></li>
+              <li><a href="https://subscription.economist.com/DE/EngCore/Search/subscription-offers" data-ec-omniture="mini_map|subscribe">Subscribe</a></li>
+              <li><a href="https://www.economist.com/printedition" data-ec-omniture="mini_map|print_edition">Print edition</a></li>
+              <li><a href="https://www.economist.com/digital" data-ec-omniture="mini_map|digital_editions">Digital editions</a></li>
+              <li><a href="https://www.economist.com/events-conferences" data-ec-omniture="mini_map|events">Events</a></li>
+              <li><a href="http://jobs.economist.com/" data-ec-omniture="mini_map|jobs_economist_com">Jobs.Economist.com</a></li>
+              <li><a href="https://www.economist.com/cookies-info" data-ec-omniture="mini_map|manage_cookies">Manage Cookies</a></li>
+          </ul>
+  </div>
+<div>
+  <h6>Sections</h6>
+  <ul class="footer-index-site-2-content">
+                <li><a href="https://www.economist.com/sections/united-states" data-ec-omniture="mini_map|united_states">United States</a></li>
+                <li><a href="https://www.economist.com/sections/britain" data-ec-omniture="mini_map|britain">Britain</a></li>
+                <li><a href="https://www.economist.com/sections/europe" data-ec-omniture="mini_map|europe">Europe</a></li>
+                <li><a href="https://www.economist.com/sections/china" data-ec-omniture="mini_map|china">China</a></li>
+                <li><a href="https://www.economist.com/sections/asia" data-ec-omniture="mini_map|asia">Asia</a></li>
+                <li><a href="https://www.economist.com/sections/americas" data-ec-omniture="mini_map|americas">Americas</a></li>
+                <li><a href="https://www.economist.com/sections/middle-east-africa" data-ec-omniture="mini_map|middle_east_africa">Middle East &amp; Africa</a></li>
+                <li><a href="https://www.economist.com/sections/international" data-ec-omniture="mini_map|international">International</a></li>
+                <li><a href="https://www.economist.com/sections/business-finance" data-ec-omniture="mini_map|business_finance">Business &amp; finance</a></li>
+                <li><a href="https://www.economist.com/sections/economics" data-ec-omniture="mini_map|economics">Economics</a></li>
+                <li><a href="https://www.economist.com/markets-data" data-ec-omniture="mini_map|markets_data">Markets &amp; data</a></li>
+                <li><a href="https://www.economist.com/sections/science-technology" data-ec-omniture="mini_map|science_technology">Science &amp; technology</a></li>
+                <li><a href="http://www.economist.com/specialreports" data-ec-omniture="mini_map|special_reports">Special reports</a></li>
+                <li><a href="https://www.economist.com/sections/culture" data-ec-omniture="mini_map|culture">Culture</a></li>
+                <li><a href="https://www.economist.com/multimedia" data-ec-omniture="mini_map|multimedia_library">Multimedia library</a></li>
+            </ul>
+      <h6>Debate and discussion</h6>
+    <ul>
+            <li><a href="http://www.economist.com/debate" data-ec-omniture="mini_map|the_economist_debates">The Economist debates</a></li>
+                <li><a href="https://www.economist.com/letters" data-ec-omniture="mini_map|letters_to_the_editor">Letters to the editor</a></li>
+                <li><a href="http://www.economist.com/economist-quiz" data-ec-omniture="mini_map|the_economist_quiz">The Economist Quiz</a></li>
+      </ul>
+</div>
+  <div>
+    <h6>Blogs</h6>
+    <ul>
+
+              <li><a href="https://www.economist.com/blogs/bagehot" data-ec-omniture="mini_map|bagehots_notebook">Bagehot&#039;s notebook</a></li>
+              <li><a href="https://www.economist.com/blogs/buttonwood" data-ec-omniture="mini_map|buttonwoods_notebook">Buttonwood&#039;s notebook</a></li>
+              <li><a href="https://www.economist.com/blogs/democracyinamerica" data-ec-omniture="mini_map|democracy_in_america">Democracy in America</a></li>
+              <li><a href="https://www.economist.com/blogs/erasmus" data-ec-omniture="mini_map|erasmus">Erasmus</a></li>
+              <li><a href="https://www.economist.com/blogs/freeexchange" data-ec-omniture="mini_map|free_exchange">Free exchange</a></li>
+              <li><a href="https://www.economist.com/blogs/gametheory" data-ec-omniture="mini_map|game_theory">Game theory</a></li>
+              <li><a href="https://www.economist.com/blogs/graphicdetail" data-ec-omniture="mini_map|graphic_detail">Graphic detail</a></li>
+              <li><a href="https://www.economist.com/blogs/gulliver" data-ec-omniture="mini_map|gulliver">Gulliver</a></li>
+              <li><a href="https://www.economist.com/blogs/prospero" data-ec-omniture="mini_map|prospero">Prospero</a></li>
+              <li><a href="https://www.economist.com/blogs/economist-explains" data-ec-omniture="mini_map|the_economist_explains">The Economist explains</a></li>
+          </ul>
+  </div>
+  <div>
+    <h6>Research and insights</h6>
+    <ul>
+                              <li><a href="https://www.economist.com/topics" data-ec-omniture="mini_map|topics">Topics</a></li>
+                                        <li><a href="https://www.economist.com/economics-a-to-z" data-ec-omniture="mini_map|economics_a_z" class="active">Economics A-Z</a></li>
+                                        <li><a href="http://www.theworldin.com/" data-ec-omniture="mini_map|the_world_in">The World In</a></li>
+                                        <li><a href="https://www.economist.com/whichmba" data-ec-omniture="mini_map|which_mba_">Which MBA?</a></li>
+                                        <li><a href="https://success.economist.com/?fsrc=econfooter" data-ec-omniture="mini_map|mba_services">MBA Services</a></li>
+                                        <li><a href="https://gmat.economist.com/?gsrc=economist_footer" data-ec-omniture="mini_map|the_economist_gmat_tutor">The Economist GMAT Tutor</a></li>
+                                        <li><a href="https://gre.economist.com/?gsrc=economist_footer" data-ec-omniture="mini_map|the_economist_gre_tutor">The Economist GRE Tutor</a></li>
+                                        <li><a href="https://execed.economist.com/?fsrc=econ-foot" data-ec-omniture="mini_map|executive_education_navigator">Executive Education Navigator</a></li>
+                                        <li><a href="https://www.economist.com/rights/" data-ec-omniture="mini_map|reprints_and_permissions">Reprints and permissions</a></li>
+                                        </ul>
+              <h6><a href="http://www.economistgroup.com" data-ec-omniture="mini_map|the_economist_group">The Economist Group &raquo;</a></h6>
+            <ul>
+                                        <li><a href="http://www.eiu.com" data-ec-omniture="mini_map|the_economist_intelligence_unit">The Economist Intelligence Unit</a></li>
+                                        <li><a href="http://store.eiu.com" data-ec-omniture="mini_map|the_economist_intelligence_unit_store">The Economist Intelligence Unit Store</a></li>
+                                        <li><a href="http://www.corporatenetwork.com" data-ec-omniture="mini_map|the_economist_corporate_network">The Economist Corporate Network</a></li>
+                                        <li><a href="http://ideaspeoplemedia.com/" data-ec-omniture="mini_map|ideas_people_media">Ideas People Media</a></li>
+                                        <li><a href="http://www.1843magazine.com/" data-ec-omniture="mini_map|1843_magazine">1843 Magazine</a></li>
+                                        <li><a href="http://www.rollcall.com/?t=0506EC&amp;p=econ&amp;s=econ" data-ec-omniture="mini_map|roll_call">Roll Call</a></li>
+                                        <li><a href="http://www.cq.com/news.do" data-ec-omniture="mini_map|cq">CQ</a></li>
+                                        <li><a href="http://www.eurofinance.com" data-ec-omniture="mini_map|eurofinance">EuroFinance</a></li>
+                                        <li><a href="http://shop.economist.com" data-ec-omniture="mini_map|the_economist_store">The Economist Store</a></li>
+                                        <li><a href="http://mediadirectory.economist.com" data-ec-omniture="mini_map|editorial_staff">Editorial Staff</a></li>
+                                        <li><a href="http://www.economistgroup.com/pdfs/Modern_Slavery_statement.pdf" data-ec-omniture="mini_map|modern_slavery_statement">Modern Slavery Statement</a></li>
+                                        </ul>
+              <h6 class="minimap-site-index"><a href="https://www.economist.com/content/site-index" data-ec-omniture="mini_map|view_complete_site_index_">View complete site index »</a></h6>
+            <ul>
+                      </ul>
+  </div>
+
+
+    </aside>
+    <div id="block-ec_ads-slider_ad" class="block block-ec_ads 
+ec-ads-gpt">
+    <div class="content clearfix">
+    <!-- Site: Commerce.  Zone: Economics A-Z |  --> <div id="gpt_slider_ad" ><script type="text/javascript">  googletag.cmd.push(function() {      googletag.display("gpt_slider_ad");  });
+</script><noscript>
+  <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5605/teg.lasn/ajde&amp;t=subs%3Dn%26sdn%3Dn%26pos%3Dslider&amp;sz=1x1&amp;tile=11&amp;c=679733243" target="_blank">
+   <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5605/teg.lasn/ajde&amp;t=subs%3Dn%26sdn%3Dn%26pos%3Dslider&amp;sz=1x1&amp;tile=11&amp;c=679733243" />
+  </a>
+</noscript></div>  </div>
+</div>
+
+<div id="block-ec_ads-adcast" class="block block-ec_ads 
+ec-ads-gpt">
+    <div class="content clearfix">
+    <div class="ec-ads-remove-if-empty"><!-- Site: Commerce.  Zone: Economics A-Z |  --> <div id="gpt_adcast" ><script type="text/javascript">  googletag.cmd.push(function() {      googletag.display("gpt_adcast");  });
+</script><noscript>
+  <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5605/teg.lasn/ajde&amp;t=subs%3Dn%26sdn%3Dn%26pos%3Dadcast&amp;sz=250x1000&amp;tile=12&amp;c=679733243" target="_blank">
+   <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5605/teg.lasn/ajde&amp;t=subs%3Dn%26sdn%3Dn%26pos%3Dadcast&amp;sz=250x1000&amp;tile=12&amp;c=679733243" />
+  </a>
+</noscript></div></div>  </div>
+</div>
+
+
+    <footer>
+        <div class="footer-stripe-top">
+    <ul>
+                                <li><a href="https://www.economist.com/contact-info" data-ec-omniture="footer|contact_us">Contact us</a></li>
+                          <li><a href="https://www.economist.com/help" data-ec-omniture="footer|help">Help</a></li>
+                          <li><a href="https://www.economist.com/help/about-us#About_Economistcom" data-ec-omniture="footer|about_us">About us</a></li>
+                          <li><a href="http://www.economistgroupmedia.com" data-ec-omniture="footer|advertise_with_us">Advertise with us</a></li>
+                          <li><a href="https://www.economist.com/mediadirectory/books" data-ec-omniture="footer|staff_books">Staff Books</a></li>
+                          <li><a href="http://www.economistgroupcareers.com" data-ec-omniture="footer|careers">Careers</a></li>
+                          <li><a href="https://www.economist.com/content/site-index" data-ec-omniture="footer|site_index">Site index</a></li>
+                          </ul>
+  </div>
+
+<div class="footer-stripe-bottom">
+  <ul>
+    <li>Copyright &copy; The Economist Newspaper Limited 2020. All rights reserved.</li>
+                        <li><a href="http://www.economistgroup.com/results_and_governance/governance/guiding_principles.html" data-ec-omniture="footer|modern_slavery_statement">Modern Slavery Statement</a></li>
+                  <li><a href="https://www.economist.com/help/accessibilitypolicy" data-ec-omniture="footer|accessibility">Accessibility</a></li>
+                  <li><a href="http://www.economistgroup.com/results_and_governance/governance/privacy" data-ec-omniture="footer|privacy_policy">Privacy policy</a></li>
+                  <li><a href="https://www.economist.com/cookies-info" data-ec-omniture="footer|cookie_policy">Cookie Policy</a></li>
+                  <li><a href="https://www.economist.com/legal/terms-of-use" data-ec-omniture="footer|terms_of_use">Terms of use</a></li>
+                      </ul>
+</div>
+    </footer> <!-- /footer -->
+  </div>
+
+    
+<!--
+    SiteCatalyst code version: H.13    Copyright 1997-2009 Omniture, Inc.
+    More info available at http://www.omniture.com
+-->
+<script language="javascript" type="text/javascript">var s_account = 'economistcomprod';
+</script><script language="javascript" src="https://cdn.static-economist.com/sites/default/files/external/ec_omniture/3_10/ec_omniture_s_code.js" type="text/javascript"></script>
+<script language="javascript" type="text/javascript">
+  s.pageName="economics_a_z_terms_beginning_with_a";
+s.pageType="";
+s.server="economist.com";
+s.channel="other";
+s.contextData.subsection="";
+s.prop1="economics-a-to-z";
+s.prop2="";
+s.prop3="web";
+s.prop4="other";
+s.prop5="";
+s.prop6="";
+s.prop7="";
+s.prop11="not_logged_in";
+s.prop12="";
+s.prop13="anonymous|none";
+s.prop14="";
+s.prop15="";
+s.prop26="";
+s.prop28="";
+s.prop31="";
+s.prop34="econfinal";
+s.prop40="0";
+s.prop41="lasn";
+s.prop42="ajde";
+s.hier1="";
+s.state="";
+s.zip="";
+  // For grape shot.
+  if (typeof s !== "undefined" && typeof window.gs_channels !== "undefined") {
+    s.prop6 = window.gs_channels;
+  }
+  if (typeof s !== "undefined" && typeof Economist !== "undefined" && typeof Economist.userData !== "undefined" && typeof Economist.userData.data !== "undefined") {
+    s.prop11 = "logged_in";
+
+    if (typeof Economist.userData.data.username !== "undefined" && typeof Economist.analytics !== 'undefined' && typeof Economist.analytics.omnitureTools !== 'undefined') {
+      s.prop12 = Economist.analytics.omnitureTools.clean(Economist.userData.data.username);
+    }
+
+    if (typeof Economist.userData.data.uid !== "undefined") {
+      s.prop40 = Economist.userData.data.uid;
+    }
+
+    if (typeof s.pageName !== "undefined" && s.pageName === "pay_barrier|registration_offer") {
+      s.pageName = "pay_barrier|subscription_offer";
+      s.events = "event2,event23";
+    }
+  }
+
+  // Setting revampid from JS perspective in case php wasn't able due Varnish
+  if ($.cookie("rvjourney") !== null && typeof Drupal.settings.omniture.drupal_version === 'string') {
+    s.contextData.revampid = "drupal/" + Drupal.settings.omniture.drupal_version  + "/" + $.cookie("rvjourney");
+  }
+
+  // None of the tries to catch rvjourney was successful, setting empty revampid
+  if (typeof s.contextData.revampid === "undefined") {
+    s.contextData.revampid = "";
+  }
+
+  if (typeof s !== "undefined" && typeof Economist !== "undefined" && typeof Economist.userData === "undefined" && $.cookie("ec_old_user_data") !== null) {
+    // Omniture is around, but we dont have userData structure in the Economist associative array.
+    // Check to see if we have a saved cookie with the last logged in user details within, if so use that.
+    try {
+      Economist.oldUserData = $.cookie("ec_old_user_data").split('|');
+    }
+    catch (e) {
+      // If we get a error its probably due to the cookie containing invalid data,
+      // so unset the oldUserData.
+      delete Economist.oldUserData;
+    }
+
+    if (typeof Economist.oldUserData !== "undefined" && Economist.oldUserData instanceof Array && typeof Economist.analytics !== 'undefined' && typeof Economist.analytics.omnitureTools !== 'undefined') {
+      s.prop12 = Economist.analytics.omnitureTools.clean(Economist.oldUserData[0]);
+      s.prop40 = Economist.oldUserData[1];
+    }
+  }
+
+  // Process any queued events if we are not using sessions.
+  if ($.cookie('ec_omniture_queue')) {
+    try {
+      var processQueue = (function() {
+        var queued_events, queued_event, event_name;
+        queued_events = JSON.parse($.cookie('ec_omniture_queue'));
+        for (queued_event in queued_events) {
+          for (event_name in queued_events[queued_event]) {
+            if (queued_events[queued_event].hasOwnProperty(event_name)) {
+              if (typeof s[event_name] !== "undefined" && s[event_name].length > 0) {
+                s[event_name] += ',' + queued_events[queued_event][event_name];
+              } else {
+                s[event_name] = queued_events[queued_event][event_name];
+              }
+            }
+          }
+        }
+      }());
+    } catch (e) {
+      // do nothing but catch the error so it doesn't propagate -
+      // we ensure the cookie is deleted in the finally block.
+    } finally {
+      $.cookie('ec_omniture_queue', '', { path: '/', expires: -5 });
+    }
+  }
+  var s_code=s.t();if(s_code)document.write(s_code)
+</script>
+<script language="JavaScript" type="text/javascript">
+   if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-');
+</script>
+<noscript>
+  <a href="http://www.omniture.com" title="Web Analytics">
+    <img src="https://sstats.economist.com/b/ss/economistcomprod/1/H.20.3--NS/0" height="1" width="1" border="0" alt="" />
+  </a>
+</noscript>
+<!-- End SiteCatalyst code version: H.13 -->
+<script type="text/javascript" src="https://www.economist.com/sites/default/files/js/js_a7a92458d5a944c886967b22a161c142.js"></script>
+      <!--
+START of Interactive Avenue Pixel Tag: Please do not remove!!
+-->
+<script type="text/javascript">
+  /* <![CDATA[ */
+  var google_conversion_id = 1035071974;
+  var google_custom_params = window.google_tag_params;
+  var google_remarketing_only = true;
+  /* ]]> */
+</script>
+<script type="text/javascript"
+        src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+  <div style="display:inline;">
+    <img height="1" width="1" style="border-style:none;" alt=""
+         src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1035071974/?value=0&amp;guid=ON&amp;script=0"/>
+  </div>
+</noscript>
+
+<script type="text/javascript">
+  /* <![CDATA[ */
+  var google_conversion_id = 1047392724;
+  var google_custom_params = window.google_tag_params;
+  var google_remarketing_only = true;
+  /* ]]> */
+</script>
+<script type="text/javascript"
+        src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+  <div style="display:inline;">
+    <img height="1" width="1" style="border-style:none;" alt=""
+         src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1047392724/?value=0&amp;guid=ON&amp;script=0"/>
+  </div>
+</noscript>
+<!--
+END of Interactive Avenue Pixel Tag: Please do not remove!!
+-->
+
+<!--
+START of Universal McCann Tag: Please do not remove!!
+-->
+<script src="https://d21j20wsoewvjq.cloudfront.net/tt-8c244b370747c1930a4e0967254778ddbb69f6a409e62beebe5f92191a09a3a1.js" async>
+</script>
+<!--
+END of Universal McCann Tag: Please do not remove!!
+-->
+<script src="https://tag.yieldoptimizer.com/ps/ps?t=s&amp;p=1814&amp;pg=Page"></script>            <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.eu01.nr-data.net","licenseKey":"NRJS-4c4eb29f17cb78c4f91","applicationID":"27932262","transactionName":"MhBSZQoZCxFWUBZbWgtacVIMEQoMGEULV0IWKkBQHx0=","queueTime":0,"applicationTime":522,"atts":"HldRE0IDGB8=","errorBeacon":"bam.eu01.nr-data.net","agent":""}</script><script async type="text/javascript" src="https://www.economist.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&amp;ns=3&amp;cb=621584370"></script>
+</body>
+</html>
